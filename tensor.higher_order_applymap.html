@@ -28,22 +28,69 @@
           <li><a href="tensor.comparison.html">tensor.comparison</a></li>
           <li><a href="tensor.data_structure.html">tensor.data_structure</a></li>
           <li><a href="tensor.display.html">tensor.display</a></li>
+          <li><a href="tensor.display_cuda.html">tensor.display_cuda</a></li>
           <li><a href="tensor.exporting.html">tensor.exporting</a></li>
           <li><a href="tensor.filling_data.html">tensor.filling_data</a></li>
           <li><a href="tensor.higher_order_applymap.html">tensor.higher_order_applymap</a></li>
           <li><a href="tensor.higher_order_foldreduce.html">tensor.higher_order_foldreduce</a></li>
           <li><a href="tensor.init_cpu.html">tensor.init_cpu</a></li>
+          <li><a href="tensor.init_cuda.html">tensor.init_cuda</a></li>
+          <li><a href="tensor.init_opencl.html">tensor.init_opencl</a></li>
           <li><a href="tensor.init_copy_cpu.html">tensor.init_copy_cpu</a></li>
+          <li><a href="tensor.init_copy_cuda.html">tensor.init_copy_cuda</a></li>
           <li><a href="tensor.lapack.html">tensor.lapack</a></li>
           <li><a href="tensor.math_functions.html">tensor.math_functions</a></li>
           <li><a href="tensor.operators_blas_l1.html">tensor.operators_blas_l1</a></li>
+          <li><a href="tensor.operators_blas_l1_cuda.html">tensor.operators_blas_l1_cuda</a></li>
+          <li><a href="tensor.operators_blas_l1_opencl.html">tensor.operators_blas_l1_opencl</a></li>
           <li><a href="tensor.operators_blas_l2l3.html">tensor.operators_blas_l2l3</a></li>
+          <li><a href="tensor.operators_blas_l2l3_cuda.html">tensor.operators_blas_l2l3_cuda</a></li>
+          <li><a href="tensor.operators_blas_l2l3_opencl.html">tensor.operators_blas_l2l3_opencl</a></li>
           <li><a href="tensor.operators_broadcasted.html">tensor.operators_broadcasted</a></li>
+          <li><a href="tensor.operators_broadcasted_cuda.html">tensor.operators_broadcasted_cuda</a></li>
+          <li><a href="tensor.operators_broadcasted_opencl.html">tensor.operators_broadcasted_opencl</a></li>
+          <li><a href="tensor.operators_comparison.html">tensor.operators_comparison</a></li>
           <li><a href="tensor.operators_logical.html">tensor.operators_logical</a></li>
           <li><a href="tensor.optim_ops_fusion.html">tensor.optim_ops_fusion</a></li>
           <li><a href="tensor.shapeshifting.html">tensor.shapeshifting</a></li>
+          <li><a href="tensor.shapeshifting_cuda.html">tensor.shapeshifting_cuda</a></li>
+          <li><a href="tensor.shapeshifting_opencl.html">tensor.shapeshifting_opencl</a></li>
           <li><a href="tensor.syntactic_sugar.html">tensor.syntactic_sugar</a></li>
           <li><a href="tensor.ufunc.html">tensor.ufunc</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Neural network API</a>
+        <ul class="monospace">
+          <li><a href="nn_dsl.dsl_core.html">Neural network: Declaration</a></li>
+          <li><a href="nn_activation.relu.html">Activation: Relu (Rectified linear Unit)</a></li>
+          <li><a href="nn_activation.sigmoid.html">Activation: Sigmoid</a></li>
+          <li><a href="nn_activation.tanh.html">Activation: Tanh</a></li>
+          <li><a href="nn_layers.conv2D.html">Layers: Convolution 2D</a></li>
+          <li><a href="nn_layers.linear.html">Layers: Linear/Dense</a></li>
+          <li><a href="nn_layers.maxpool2D.html">Layers: Maxpool 2D</a></li>
+          <li><a href="nn_loss.cross_entropy_losses.html">Loss: Cross-Entropy losses</a></li>
+          <li><a href="nn_loss.mean_square_error_loss.html">Loss: Mean Square Error</a></li>
+          <li><a href="nn_optimizers.optimizers.html">Optimizers</a></li>
+          <li><a href="nn_shapeshifting.reshape_flatten.html">Reshape & Flatten</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Linear algebra, stats, ML</a>
+        <ul class="monospace">
+          <li><a href="la.decomposition.html">Eigenvalue decomposition</a></li>
+          <li><a href="la.least_squares.html">Least Squares solver</a></li>
+          <li><a href="stats.stats.html">Statistics</a></li>
+          <li><a href="ml.pca.html">Principal Component Analysis (PCA)</a></li>
+          <li><a href="ml.accuracy_score.html">Accuracy score</a></li>
+          <li><a href="ml.common_error_functions.html">Common errors, MAE and MSE (L1, L2 loss)</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">IO & Datasets</a>
+        <ul class="monospace">
+          <li><a href="datasets.mnist.html">MNIST</a></li>
+          <li><a href="io.io_csv.html">CSV reading and writing</a></li>
         </ul>
       </span>
       <span>
@@ -57,24 +104,17 @@
         </ul>
       </span>
       <span>
-        <a href="#">Neural network API</a>
-        <ul class="monospace">
-          <li><a href="nn_activation.relu.html">Activation: Relu (Rectified linear Unit)</a></li>
-          <li><a href="nn_activation.sigmoid.html">Activation: Sigmoid</a></li>
-          <li><a href="nn_layers.conv2D.html">Layers: Convolution</a></li>
-          <li><a href="nn_layers.conv2D.html">Layers: Linear/Dense</a></li>
-          <li><a href="nn_loss.sigmoid_cross_entropy.html">Loss: Sigmoid Cross-Entropy</a></li>
-          <li><a href="nn_optimizers.optimizers.html">Optimizers</a></li>
-        </ul>
-      </span>
-      <span>
         <a href="#">Neuralnet primitives</a>
         <ul class="monospace">
-          <li><a href="nnp.nnp_activation.html">Activation</a></li>
-          <li><a href="nnp.nnp_convolution.html">Convolution</a></li>
+          <li><a href="nnp.nnp_activation.html">Activations</a></li>
+          <li><a href="nnp.nnp_convolution.html">Convolution 2D</a></li>
+          <li><a href="nnp.nnp_conv2D_cudnn.html">Convolution 2D - CuDNN</a></li>
           <li><a href="nnp.nnp_linear.html">Linear / Dense layer</a></li>
+          <li><a href="nnp.nnp_maxpooling.html">Maxpooling</a></li>
+          <li><a href="nnp.nnp_numerical_gradient.html">Numerical gradient</a></li>
           <li><a href="nnp.nnp_sigmoid_cross_entropy.html">Sigmoid Cross-Entropy loss</a></li>
           <li><a href="nnp.nnp_softmax_cross_entropy.html">Softmax Cross-Entropy loss</a></li>
+          <li><a href="nnp.nnp_softmax.html">Softmax</a></li>
         </ul>
       </span>
     </ul>
@@ -116,7 +156,7 @@
     <ul class="simple">
     </ul>
   </div>
-  <div id="searchInput">
+  <div id="searchInputDiv">
     Search: <input type="text" id="searchInput"
       onkeyup="search()" />
   </div>
@@ -204,9 +244,9 @@ Apply a unary function in an element-wise manner on Tensor[T], returning a new T
 <p>For OpenMP compatibility, this <tt class="docutils literal"><span class="pre">map</span></tt> doesn't allow ref types as result like seq or string</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L78"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L116"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L78" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L116" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="map"><a name="map,Tensor[T],_2"></a><pre><span class="Keyword">proc</span> <span class="Identifier">map</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">U</span><span class="Other">:</span> <span class="Keyword">ref</span> <span class="Operator">|</span> <span class="Identifier">string</span> <span class="Operator">|</span> <span class="Identifier">seq</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Operator">-&gt;</span> <span class="Identifier">U</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">U</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
@@ -215,9 +255,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>This is a fallback for ref types as OpenMP will not work with if the results allocate memory managed by GC.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L100"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L138"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L100" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L138" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="apply"><a name="apply,Tensor[T],"></a><pre><span class="Keyword">proc</span> <span class="Identifier">apply</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Operator">-&gt;</span> <span class="Identifier">T</span><span class="Other">)</span></pre></dt>
@@ -241,9 +281,9 @@ Apply a unary function in an element-wise manner on Tensor[T], in-place.<dl clas
 </dl>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L111"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L149"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L111" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L149" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="apply"><a name="apply,Tensor[T],proc(T)"></a><pre><span class="Keyword">proc</span> <span class="Identifier">apply</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">f</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">)</span></pre></dt>
@@ -269,9 +309,9 @@ Apply a unary function in an element-wise manner on Tensor[T], in-place.<dl clas
 <p><tt class="docutils literal"><span class="pre">apply</span></tt> is especially useful to do multiple element-wise operations on a tensor in a single loop over the data.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L132"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L170"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L132" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L170" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="map2"><a name="map2,Tensor[T],,Tensor[U]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">map2</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">,</span> <span class="Identifier">U</span><span class="Other">;</span> <span class="Identifier">V</span><span class="Other">:</span> <span class="Keyword">not</span> <span class="Other">(</span><span class="Keyword">ref</span> <span class="Operator">|</span> <span class="Identifier">string</span> <span class="Operator">|</span> <span class="Identifier">seq</span><span class="Other">)</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t1</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">f</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">T</span><span class="Other">,</span> <span class="Identifier">U</span><span class="Other">)</span> <span class="Operator">-&gt;</span> <span class="Identifier">V</span><span class="Other">;</span> <span class="Identifier">t2</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">U</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span>
@@ -300,9 +340,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>For OpenMP compatibility, this <tt class="docutils literal"><span class="pre">map2</span></tt> doesn't allow ref types as result like seq or string</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L155"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L193"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L155" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L193" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="map2"><a name="map2,Tensor[T],,Tensor[U]_2"></a><pre><span class="Keyword">proc</span> <span class="Identifier">map2</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">,</span> <span class="Identifier">U</span><span class="Other">;</span> <span class="Identifier">V</span><span class="Other">:</span> <span class="Keyword">ref</span> <span class="Operator">|</span> <span class="Identifier">string</span> <span class="Operator">|</span> <span class="Identifier">seq</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t1</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">f</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">T</span><span class="Other">,</span> <span class="Identifier">U</span><span class="Other">)</span> <span class="Operator">-&gt;</span> <span class="Identifier">V</span><span class="Other">;</span> <span class="Identifier">t2</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">U</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">V</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma">
@@ -312,9 +352,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>This is a fallback for ref types as OpenMP will not work with if the results allocate memory managed by GC.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L185"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L223"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L185" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L223" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="apply2"><a name="apply2,Tensor[T],proc(T,T),Tensor[U]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">apply2</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">,</span> <span class="Identifier">U</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">f</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">y</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">U</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
@@ -335,9 +375,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>for example ```A += alpha * sin(A) + B```</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L200"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L238"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L200" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L238" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -358,9 +398,9 @@ class="link-seesrc" target="_blank">Source</a>
 <dd>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L29"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L31"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L29" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L31" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="apply3_inline"><a name="apply3_inline.t,Tensor[T],Tensor[U],Tensor[V],untyped"></a><pre><span class="Keyword">template</span> <span class="Identifier">apply3_inline</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">U</span><span class="Other">;</span> <span class="Identifier">V</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">dest</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">src1</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">U</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">src2</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">V</span><span class="Other">]</span><span class="Other">;</span>
@@ -368,36 +408,36 @@ class="link-seesrc" target="_blank">Source</a>
 <dd>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L34"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L38"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L34" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="map_inline"><a name="map_inline.t,Tensor[T],untyped"></a><pre><span class="Keyword">template</span> <span class="Identifier">map_inline</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">op</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L39"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L45"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L39" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L45" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="map2_inline"><a name="map2_inline.t,Tensor[T],Tensor[U],untyped"></a><pre><span class="Keyword">template</span> <span class="Identifier">map2_inline</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">U</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t1</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">t2</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">U</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">op</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L49"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L64"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L49" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L64" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="map3_inline"><a name="map3_inline.t,Tensor[T],Tensor[U],Tensor[V],untyped"></a><pre><span class="Keyword">template</span> <span class="Identifier">map3_inline</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">U</span><span class="Other">;</span> <span class="Identifier">V</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t1</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">t2</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">U</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">t3</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">V</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">op</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L62"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/higher_order_applymap.nim#L89"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L62" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/higher_order_applymap.nim#L89" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -410,7 +450,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2017-12-13 23:30:20 UTC</small>
+        <small>Made with Nim. Generated: 2018-05-05 17:10:14 UTC</small>
       </div>
     </div>
   </div>

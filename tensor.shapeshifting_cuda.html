@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Arraymancer - Module shapeshifting_cuda</title>
+
+  <link href="docutils.css" rel="stylesheet" type="text/css"/>
+  <link href="nav.css" rel="stylesheet" type="text/css"/>
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,900' rel='stylesheet' type='text/css'/>
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
+</head>
+<body>
+<a href="https://github.com/mratsim/arraymancer"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 10;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+<header>
+  <a class="pagetitle" href="index.html">Arraymancer</a>
+  <span>
+    <a href="#">Technical reference</a>
+    <ul class="monospace">
+      <span>
+        <a href="#">Core tensor API</a>
+        <ul class="monospace">
+          <li><a href="tensor.accessors_macros_read.html">tensor.accessors_macros_read</a></li>
+          <li><a href="tensor.accessors_macros_syntax.html">tensor.accessors_macros_syntax</a></li>
+          <li><a href="tensor.accessors_macros_write.html">tensor.accessors_macros_write</a></li>
+          <li><a href="tensor.accessors.html">tensor.accessors</a></li>
+          <li><a href="tensor.aggregate.html">tensor.aggregate</a></li>
+          <li><a href="tensor.comparison.html">tensor.comparison</a></li>
+          <li><a href="tensor.data_structure.html">tensor.data_structure</a></li>
+          <li><a href="tensor.display.html">tensor.display</a></li>
+          <li><a href="tensor.display_cuda.html">tensor.display_cuda</a></li>
+          <li><a href="tensor.exporting.html">tensor.exporting</a></li>
+          <li><a href="tensor.filling_data.html">tensor.filling_data</a></li>
+          <li><a href="tensor.higher_order_applymap.html">tensor.higher_order_applymap</a></li>
+          <li><a href="tensor.higher_order_foldreduce.html">tensor.higher_order_foldreduce</a></li>
+          <li><a href="tensor.init_cpu.html">tensor.init_cpu</a></li>
+          <li><a href="tensor.init_cuda.html">tensor.init_cuda</a></li>
+          <li><a href="tensor.init_opencl.html">tensor.init_opencl</a></li>
+          <li><a href="tensor.init_copy_cpu.html">tensor.init_copy_cpu</a></li>
+          <li><a href="tensor.init_copy_cuda.html">tensor.init_copy_cuda</a></li>
+          <li><a href="tensor.lapack.html">tensor.lapack</a></li>
+          <li><a href="tensor.math_functions.html">tensor.math_functions</a></li>
+          <li><a href="tensor.operators_blas_l1.html">tensor.operators_blas_l1</a></li>
+          <li><a href="tensor.operators_blas_l1_cuda.html">tensor.operators_blas_l1_cuda</a></li>
+          <li><a href="tensor.operators_blas_l1_opencl.html">tensor.operators_blas_l1_opencl</a></li>
+          <li><a href="tensor.operators_blas_l2l3.html">tensor.operators_blas_l2l3</a></li>
+          <li><a href="tensor.operators_blas_l2l3_cuda.html">tensor.operators_blas_l2l3_cuda</a></li>
+          <li><a href="tensor.operators_blas_l2l3_opencl.html">tensor.operators_blas_l2l3_opencl</a></li>
+          <li><a href="tensor.operators_broadcasted.html">tensor.operators_broadcasted</a></li>
+          <li><a href="tensor.operators_broadcasted_cuda.html">tensor.operators_broadcasted_cuda</a></li>
+          <li><a href="tensor.operators_broadcasted_opencl.html">tensor.operators_broadcasted_opencl</a></li>
+          <li><a href="tensor.operators_comparison.html">tensor.operators_comparison</a></li>
+          <li><a href="tensor.operators_logical.html">tensor.operators_logical</a></li>
+          <li><a href="tensor.optim_ops_fusion.html">tensor.optim_ops_fusion</a></li>
+          <li><a href="tensor.shapeshifting.html">tensor.shapeshifting</a></li>
+          <li><a href="tensor.shapeshifting_cuda.html">tensor.shapeshifting_cuda</a></li>
+          <li><a href="tensor.shapeshifting_opencl.html">tensor.shapeshifting_opencl</a></li>
+          <li><a href="tensor.syntactic_sugar.html">tensor.syntactic_sugar</a></li>
+          <li><a href="tensor.ufunc.html">tensor.ufunc</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Neural network API</a>
+        <ul class="monospace">
+          <li><a href="nn_dsl.dsl_core.html">Neural network: Declaration</a></li>
+          <li><a href="nn_activation.relu.html">Activation: Relu (Rectified linear Unit)</a></li>
+          <li><a href="nn_activation.sigmoid.html">Activation: Sigmoid</a></li>
+          <li><a href="nn_activation.tanh.html">Activation: Tanh</a></li>
+          <li><a href="nn_layers.conv2D.html">Layers: Convolution 2D</a></li>
+          <li><a href="nn_layers.linear.html">Layers: Linear/Dense</a></li>
+          <li><a href="nn_layers.maxpool2D.html">Layers: Maxpool 2D</a></li>
+          <li><a href="nn_loss.cross_entropy_losses.html">Loss: Cross-Entropy losses</a></li>
+          <li><a href="nn_loss.mean_square_error_loss.html">Loss: Mean Square Error</a></li>
+          <li><a href="nn_optimizers.optimizers.html">Optimizers</a></li>
+          <li><a href="nn_shapeshifting.reshape_flatten.html">Reshape & Flatten</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Linear algebra, stats, ML</a>
+        <ul class="monospace">
+          <li><a href="la.decomposition.html">Eigenvalue decomposition</a></li>
+          <li><a href="la.least_squares.html">Least Squares solver</a></li>
+          <li><a href="stats.stats.html">Statistics</a></li>
+          <li><a href="ml.pca.html">Principal Component Analysis (PCA)</a></li>
+          <li><a href="ml.accuracy_score.html">Accuracy score</a></li>
+          <li><a href="ml.common_error_functions.html">Common errors, MAE and MSE (L1, L2 loss)</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">IO & Datasets</a>
+        <ul class="monospace">
+          <li><a href="datasets.mnist.html">MNIST</a></li>
+          <li><a href="io.io_csv.html">CSV reading and writing</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Autograd</a>
+        <ul class="monospace">
+          <li><a href="ag.ag_accessors.html">Accessors</a></li>
+          <li><a href="ag.ag_data_structure.html">Data structure</a></li>
+          <li><a href="ag.gates_basic.html">Basic operations</a></li>
+          <li><a href="ag.gates_blas.html">Linear algebra operations</a></li>
+          <li><a href="ag.gates_reduce.html">Reduction operations</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Neuralnet primitives</a>
+        <ul class="monospace">
+          <li><a href="nnp.nnp_activation.html">Activations</a></li>
+          <li><a href="nnp.nnp_convolution.html">Convolution 2D</a></li>
+          <li><a href="nnp.nnp_conv2D_cudnn.html">Convolution 2D - CuDNN</a></li>
+          <li><a href="nnp.nnp_linear.html">Linear / Dense layer</a></li>
+          <li><a href="nnp.nnp_maxpooling.html">Maxpooling</a></li>
+          <li><a href="nnp.nnp_numerical_gradient.html">Numerical gradient</a></li>
+          <li><a href="nnp.nnp_sigmoid_cross_entropy.html">Sigmoid Cross-Entropy loss</a></li>
+          <li><a href="nnp.nnp_softmax_cross_entropy.html">Softmax Cross-Entropy loss</a></li>
+          <li><a href="nnp.nnp_softmax.html">Softmax</a></li>
+        </ul>
+      </span>
+    </ul>
+  </span>
+  <span>
+    <a href="#">Tutorial</a>
+    <ul class="monospace">
+      <li><a href="tuto.first_steps.html">First steps</a></li>
+      <li><a href="tuto.slicing.html">Taking a slice of a tensor</a></li>
+      <li><a href="tuto.linear_algebra.html">Matrix & vectors operations</a></li>
+      <li><a href="tuto.broadcasting.html">Broadcasted operations</a></li>
+      <li><a href="tuto.shapeshifting.html">Transposing, Reshaping, Permuting, Concatenating</a></li>
+      <li><a href="tuto.map_reduce.html">Map & Reduce</a></li>
+      <li><a href="tuto.iterators.html">Basic iterators</a></li>
+    </ul>
+  </span>
+  <span>
+    <a href="#">Spellbook (How-To&apos;s)</a>
+    <ul class="monospace">
+      <li><a href="howto.type_conversion.html">How to convert a Tensor type?</a></li>
+      <li><a href="howto.ufunc.html">How to create a new universal function?</a></li>
+      <li><a href="howto.perceptron.html">How to create a multilayer perceptron?</a></li>
+    </ul>
+  </span>
+  <span>
+    <a href="#">Under the hood</a>
+    <ul class="monospace">
+      <li><a href="uth.speed.html">How Arraymancer achieves its speed?</a></li>
+      <li><a href="uth.copy_semantics.html">Why does `=` share data by default aka reference semantics?</a></li>
+    </ul>
+  </span>
+</header>
+<article id="documentId">
+  <div class="container">
+    <h1 class="title">Module shapeshifting_cuda</h1>
+    <div class="row">
+  <div class="three columns">
+  <div id="global-links">
+    <ul class="simple">
+    </ul>
+  </div>
+  <div id="searchInputDiv">
+    Search: <input type="text" id="searchInput"
+      onkeyup="search()" />
+  </div>
+  <div>
+    Group by:
+    <select onchange="groupBy(this.value)">
+      <option value="section">Section</option>
+      <option value="type">Type</option>
+    </select>
+  </div>
+  <ul class="simple simple-toc" id="toc-list">
+<li>
+  <a class="reference reference-toplevel" href="#6" id="56">Imports</a>
+  <ul class="simple simple-toc-section">
+    
+  </ul>
+</li>
+<li>
+  <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
+  <ul class="simple simple-toc-section">
+      <li><a class="reference" href="#transpose,CudaTensor"
+    title="transpose(t: CudaTensor): CudaTensor"><wbr />transpose<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#asContiguous,CudaTensor[T: SomeFloat],OrderType,bool"
+    title="asContiguous[T: SomeFloat](t: CudaTensor[T]; layout: OrderType = colMajor;
+                          force: bool = false): CudaTensor[T]"><wbr />as<wbr />Contiguous<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#reshape,CudaTensor,varargs[int]"
+    title="reshape(t: CudaTensor; new_shape: varargs[int]): CudaTensor"><wbr />reshape<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#broadcast,CudaTensor,varargs[int]"
+    title="broadcast(t: CudaTensor; shape: varargs[int]): CudaTensor"><wbr />broadcast<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#broadcast,CudaTensor,MetadataArray"
+    title="broadcast(t: CudaTensor; shape: MetadataArray): CudaTensor"><wbr />broadcast<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#broadcast2,CudaTensor[T],CudaTensor[T]"
+    title="broadcast2[T](a, b: CudaTensor[T]): tuple[a, b: CudaTensor[T]]"><wbr />broadcast2<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#squeeze,CudaTensor,int"
+    title="squeeze(t: CudaTensor; axis: int): CudaTensor"><wbr />squeeze<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#unsqueeze,CudaTensor,int"
+    title="unsqueeze(t: CudaTensor; axis: int): CudaTensor"><wbr />unsqueeze<span class="attachedType" style="visibility:hidden"></span></a></li>
+
+  </ul>
+</li>
+
+</ul>
+
+  </div>
+  <div class="nine columns" id="content">
+  <div id="tocRoot"></div>
+  <p class="module-desc"></p>
+  <div class="section" id="6">
+<h1><a class="toc-backref" href="#6">Imports</a></h1>
+<dl class="item">
+<a class="reference external" href="./backend/metadataArray.html">./backend/metadataArray</a>, <a class="reference external" href="./private/p_kernels_interface_cuda.html">./private/p_kernels_interface_cuda</a>, <a class="reference external" href="./private/p_init_cuda.html">./private/p_init_cuda</a>, <a class="reference external" href="./private/p_shapeshifting.html">./private/p_shapeshifting</a>, <a class="reference external" href="./data_structure.html">./data_structure</a>
+</dl></div>
+<div class="section" id="12">
+<h1><a class="toc-backref" href="#12">Procs</a></h1>
+<dl class="item">
+<dt id="transpose"><a name="transpose,CudaTensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">transpose</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dd>
+<p>Transpose a Tensor.</p>
+<p>For N-d Tensor with shape (0, 1, 2 ... n-1) the resulting tensor will have shape (n-1, ... 2, 1, 0)</p>
+
+&nbsp;&nbsp;<a
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/shapeshifting_cuda.nim#L25"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/shapeshifting_cuda.nim#L25" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<dt id="asContiguous"><a name="asContiguous,CudaTensor[T: SomeFloat],OrderType,bool"></a><pre><span class="Keyword">proc</span> <span class="Identifier">asContiguous</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">layout</span><span class="Other">:</span> <span class="Identifier">OrderType</span> <span class="Other">=</span> <span class="Identifier">colMajor</span><span class="Other">;</span>
+                              <span class="Identifier">force</span><span class="Other">:</span> <span class="Identifier">bool</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dd>
+<p>Transform a tensor with general striding to a Tensor with contiguous layout.</p>
+<p>By default CudaTensor will be colMajor (contrary to a cpu tensor).</p>
+<p>By default nothing is done if the tensor is already contiguous (C Major or F major) The &quot;force&quot; parameter can force re-ordering to a specific layout</p>
+
+&nbsp;&nbsp;<a
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/shapeshifting_cuda.nim#L37"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/shapeshifting_cuda.nim#L37" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<dt id="reshape"><a name="reshape,CudaTensor,varargs[int]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">reshape</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">;</span> <span class="Identifier">new_shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span></pre></dt>
+<dd>
+<p>Reshape a CudaTensor without copy.</p>
+<p>⚠ Reshaping without copy is only possible on contiguous Tensors</p>
+
+&nbsp;&nbsp;<a
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/shapeshifting_cuda.nim#L58"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/shapeshifting_cuda.nim#L58" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<dt id="broadcast"><a name="broadcast,CudaTensor,varargs[int]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">broadcast</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">;</span> <span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dd>
+<p>Explicitly broadcast a CudaTensor to the specified shape. The returned broadcasted CudaTensor share the underlying data with the input.</p>
+<p>Dimension(s) of size 1 can be expanded to arbitrary size by replicating values along that dimension.</p>
+<dl class="docutils"><dt>Warning ⚠:</dt>
+<dd>This is a no-copy operation, data is shared with the input. This proc does not guarantee that a <tt class="docutils literal"><span class="pre">let</span></tt> value is immutable. A broadcasted tensor should not be modified and only used for computation.</dd>
+</dl>
+
+&nbsp;&nbsp;<a
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/shapeshifting_cuda.nim#L66"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/shapeshifting_cuda.nim#L66" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<dt id="broadcast"><a name="broadcast,CudaTensor,MetadataArray"></a><pre><span class="Keyword">proc</span> <span class="Identifier">broadcast</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">;</span> <span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">MetadataArray</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dd>
+<p>Explicitly broadcast a CudaTensor to the specified shape. The returned broadcasted CudaTensor share the underlying data with the input.</p>
+<p>Dimension(s) of size 1 can be expanded to arbitrary size by replicating values along that dimension.</p>
+<dl class="docutils"><dt>Warning ⚠:</dt>
+<dd>This is a no-copy operation, data is shared with the input. This proc does not guarantee that a <tt class="docutils literal"><span class="pre">let</span></tt> value is immutable. A broadcasted tensor should not be modified and only used for computation.</dd>
+</dl>
+
+&nbsp;&nbsp;<a
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/shapeshifting_cuda.nim#L80"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/shapeshifting_cuda.nim#L80" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<dt id="broadcast2"><a name="broadcast2,CudaTensor[T],CudaTensor[T]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">broadcast2</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dd>
+<p>Broadcast 2 tensors so they have compatible shapes for element-wise computations.</p>
+<p>Tensors in the tuple can be accessed with output.a and output.b</p>
+<p>The returned broadcasted Tensors share the underlying data with the input.</p>
+<p>Dimension(s) of size 1 can be expanded to arbitrary size by replicating values along that dimension.</p>
+<dl class="docutils"><dt>Warning ⚠:</dt>
+<dd>This is a no-copy operation, data is shared with the input. This proc does not guarantee that a <tt class="docutils literal"><span class="pre">let</span></tt> value is immutable. A broadcasted tensor should not be modified and only used for computation.</dd>
+</dl>
+
+&nbsp;&nbsp;<a
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/shapeshifting_cuda.nim#L94"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/shapeshifting_cuda.nim#L94" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<dt id="squeeze"><a name="squeeze,CudaTensor,int"></a><pre><span class="Keyword">proc</span> <span class="Identifier">squeeze</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">;</span> <span class="Identifier">axis</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dd>
+Collapse the given axis, if the dimension is not 1; it does nothing<dl class="docutils"><dt>Input:</dt>
+<dd><ul class="simple"><li>a CudaTensor</li>
+<li>an axis (dimension)</li>
+</ul>
+</dd>
+<dt>Returns:</dt>
+<dd><ul class="simple"><li>a CudaTensor with singleton dimensions collapsed</li>
+</ul>
+</dd>
+<dt>Warning ⚠:</dt>
+<dd>This is a no-copy operation, data is shared with the input. This proc does not guarantee that a <tt class="docutils literal"><span class="pre">let</span></tt> value is immutable.</dd>
+</dl>
+
+&nbsp;&nbsp;<a
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/shapeshifting_cuda.nim#L114"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/shapeshifting_cuda.nim#L114" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<dt id="unsqueeze"><a name="unsqueeze,CudaTensor,int"></a><pre><span class="Keyword">proc</span> <span class="Identifier">unsqueeze</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">;</span> <span class="Identifier">axis</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dd>
+Insert a new axis just before the given axis, increasing the CudaTensor<dl class="docutils"><dt>dimension (rank) by 1</dt>
+<dd><ul class="simple"><li>a tensor with that new axis</li>
+</ul>
+</dd>
+<dt>Warning ⚠:</dt>
+<dd>This is a no-copy operation, data is shared with the input. This proc does not guarantee that a <tt class="docutils literal"><span class="pre">let</span></tt> value is immutable.</dd>
+</dl>
+
+&nbsp;&nbsp;<a
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/shapeshifting_cuda.nim#L127"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/shapeshifting_cuda.nim#L127" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+
+</dl></div>
+
+  </div>
+</div>
+
+    <div class="row">
+      <div class="twelve-columns footer">
+        <span class="nim-sprite"></span>
+        <br/>
+        <small>Made with Nim. Generated: 2018-05-05 17:09:47 UTC</small>
+      </div>
+    </div>
+  </div>
+</article>
+</body>
+</html>

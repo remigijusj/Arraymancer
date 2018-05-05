@@ -28,22 +28,69 @@
           <li><a href="tensor.comparison.html">tensor.comparison</a></li>
           <li><a href="tensor.data_structure.html">tensor.data_structure</a></li>
           <li><a href="tensor.display.html">tensor.display</a></li>
+          <li><a href="tensor.display_cuda.html">tensor.display_cuda</a></li>
           <li><a href="tensor.exporting.html">tensor.exporting</a></li>
           <li><a href="tensor.filling_data.html">tensor.filling_data</a></li>
           <li><a href="tensor.higher_order_applymap.html">tensor.higher_order_applymap</a></li>
           <li><a href="tensor.higher_order_foldreduce.html">tensor.higher_order_foldreduce</a></li>
           <li><a href="tensor.init_cpu.html">tensor.init_cpu</a></li>
+          <li><a href="tensor.init_cuda.html">tensor.init_cuda</a></li>
+          <li><a href="tensor.init_opencl.html">tensor.init_opencl</a></li>
           <li><a href="tensor.init_copy_cpu.html">tensor.init_copy_cpu</a></li>
+          <li><a href="tensor.init_copy_cuda.html">tensor.init_copy_cuda</a></li>
           <li><a href="tensor.lapack.html">tensor.lapack</a></li>
           <li><a href="tensor.math_functions.html">tensor.math_functions</a></li>
           <li><a href="tensor.operators_blas_l1.html">tensor.operators_blas_l1</a></li>
+          <li><a href="tensor.operators_blas_l1_cuda.html">tensor.operators_blas_l1_cuda</a></li>
+          <li><a href="tensor.operators_blas_l1_opencl.html">tensor.operators_blas_l1_opencl</a></li>
           <li><a href="tensor.operators_blas_l2l3.html">tensor.operators_blas_l2l3</a></li>
+          <li><a href="tensor.operators_blas_l2l3_cuda.html">tensor.operators_blas_l2l3_cuda</a></li>
+          <li><a href="tensor.operators_blas_l2l3_opencl.html">tensor.operators_blas_l2l3_opencl</a></li>
           <li><a href="tensor.operators_broadcasted.html">tensor.operators_broadcasted</a></li>
+          <li><a href="tensor.operators_broadcasted_cuda.html">tensor.operators_broadcasted_cuda</a></li>
+          <li><a href="tensor.operators_broadcasted_opencl.html">tensor.operators_broadcasted_opencl</a></li>
+          <li><a href="tensor.operators_comparison.html">tensor.operators_comparison</a></li>
           <li><a href="tensor.operators_logical.html">tensor.operators_logical</a></li>
           <li><a href="tensor.optim_ops_fusion.html">tensor.optim_ops_fusion</a></li>
           <li><a href="tensor.shapeshifting.html">tensor.shapeshifting</a></li>
+          <li><a href="tensor.shapeshifting_cuda.html">tensor.shapeshifting_cuda</a></li>
+          <li><a href="tensor.shapeshifting_opencl.html">tensor.shapeshifting_opencl</a></li>
           <li><a href="tensor.syntactic_sugar.html">tensor.syntactic_sugar</a></li>
           <li><a href="tensor.ufunc.html">tensor.ufunc</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Neural network API</a>
+        <ul class="monospace">
+          <li><a href="nn_dsl.dsl_core.html">Neural network: Declaration</a></li>
+          <li><a href="nn_activation.relu.html">Activation: Relu (Rectified linear Unit)</a></li>
+          <li><a href="nn_activation.sigmoid.html">Activation: Sigmoid</a></li>
+          <li><a href="nn_activation.tanh.html">Activation: Tanh</a></li>
+          <li><a href="nn_layers.conv2D.html">Layers: Convolution 2D</a></li>
+          <li><a href="nn_layers.linear.html">Layers: Linear/Dense</a></li>
+          <li><a href="nn_layers.maxpool2D.html">Layers: Maxpool 2D</a></li>
+          <li><a href="nn_loss.cross_entropy_losses.html">Loss: Cross-Entropy losses</a></li>
+          <li><a href="nn_loss.mean_square_error_loss.html">Loss: Mean Square Error</a></li>
+          <li><a href="nn_optimizers.optimizers.html">Optimizers</a></li>
+          <li><a href="nn_shapeshifting.reshape_flatten.html">Reshape & Flatten</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Linear algebra, stats, ML</a>
+        <ul class="monospace">
+          <li><a href="la.decomposition.html">Eigenvalue decomposition</a></li>
+          <li><a href="la.least_squares.html">Least Squares solver</a></li>
+          <li><a href="stats.stats.html">Statistics</a></li>
+          <li><a href="ml.pca.html">Principal Component Analysis (PCA)</a></li>
+          <li><a href="ml.accuracy_score.html">Accuracy score</a></li>
+          <li><a href="ml.common_error_functions.html">Common errors, MAE and MSE (L1, L2 loss)</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">IO & Datasets</a>
+        <ul class="monospace">
+          <li><a href="datasets.mnist.html">MNIST</a></li>
+          <li><a href="io.io_csv.html">CSV reading and writing</a></li>
         </ul>
       </span>
       <span>
@@ -57,24 +104,17 @@
         </ul>
       </span>
       <span>
-        <a href="#">Neural network API</a>
-        <ul class="monospace">
-          <li><a href="nn_activation.relu.html">Activation: Relu (Rectified linear Unit)</a></li>
-          <li><a href="nn_activation.sigmoid.html">Activation: Sigmoid</a></li>
-          <li><a href="nn_layers.conv2D.html">Layers: Convolution</a></li>
-          <li><a href="nn_layers.conv2D.html">Layers: Linear/Dense</a></li>
-          <li><a href="nn_loss.sigmoid_cross_entropy.html">Loss: Sigmoid Cross-Entropy</a></li>
-          <li><a href="nn_optimizers.optimizers.html">Optimizers</a></li>
-        </ul>
-      </span>
-      <span>
         <a href="#">Neuralnet primitives</a>
         <ul class="monospace">
-          <li><a href="nnp.nnp_activation.html">Activation</a></li>
-          <li><a href="nnp.nnp_convolution.html">Convolution</a></li>
+          <li><a href="nnp.nnp_activation.html">Activations</a></li>
+          <li><a href="nnp.nnp_convolution.html">Convolution 2D</a></li>
+          <li><a href="nnp.nnp_conv2D_cudnn.html">Convolution 2D - CuDNN</a></li>
           <li><a href="nnp.nnp_linear.html">Linear / Dense layer</a></li>
+          <li><a href="nnp.nnp_maxpooling.html">Maxpooling</a></li>
+          <li><a href="nnp.nnp_numerical_gradient.html">Numerical gradient</a></li>
           <li><a href="nnp.nnp_sigmoid_cross_entropy.html">Sigmoid Cross-Entropy loss</a></li>
           <li><a href="nnp.nnp_softmax_cross_entropy.html">Softmax Cross-Entropy loss</a></li>
+          <li><a href="nnp.nnp_softmax.html">Softmax</a></li>
         </ul>
       </span>
     </ul>
@@ -116,7 +156,7 @@
     <ul class="simple">
     </ul>
   </div>
-  <div id="searchInput">
+  <div id="searchInputDiv">
     Search: <input type="text" id="searchInput"
       onkeyup="search()" />
   </div>
@@ -140,57 +180,57 @@
       <li><a class="reference" href="#astype,Tensor[T],typedesc[U]"
     title="astype[T, U](t: Tensor[T]; typ: typedesc[U]): Tensor[U]"><wbr />astype<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#fac,Tensor"
-    title="fac(t166037: Tensor): Tensor"><wbr />fac<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="fac(t180037: Tensor): Tensor"><wbr />fac<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#sqrt,Tensor"
-    title="sqrt(t166097: Tensor): Tensor"><wbr />sqrt<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="sqrt(t180101: Tensor): Tensor"><wbr />sqrt<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#cbrt,Tensor"
-    title="cbrt(t166157: Tensor): Tensor"><wbr />cbrt<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="cbrt(t180165: Tensor): Tensor"><wbr />cbrt<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#ln,Tensor"
-    title="ln(t166217: Tensor): Tensor"><wbr />ln<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="ln(t180229: Tensor): Tensor"><wbr />ln<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#log10,Tensor"
-    title="log10(t166277: Tensor): Tensor"><wbr />log10<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="log10(t180293: Tensor): Tensor"><wbr />log10<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#log2,Tensor"
-    title="log2(t166337: Tensor): Tensor"><wbr />log2<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="log2(t180357: Tensor): Tensor"><wbr />log2<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#exp,Tensor"
-    title="exp(t166397: Tensor): Tensor"><wbr />exp<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="exp(t180421: Tensor): Tensor"><wbr />exp<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#arccos,Tensor"
-    title="arccos(t166457: Tensor): Tensor"><wbr />arccos<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="arccos(t180485: Tensor): Tensor"><wbr />arccos<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#arcsin,Tensor"
-    title="arcsin(t166517: Tensor): Tensor"><wbr />arcsin<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="arcsin(t180549: Tensor): Tensor"><wbr />arcsin<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#arctan,Tensor"
-    title="arctan(t166577: Tensor): Tensor"><wbr />arctan<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="arctan(t180613: Tensor): Tensor"><wbr />arctan<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#cos,Tensor"
-    title="cos(t166637: Tensor): Tensor"><wbr />cos<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="cos(t180677: Tensor): Tensor"><wbr />cos<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#cosh,Tensor"
-    title="cosh(t166697: Tensor): Tensor"><wbr />cosh<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="cosh(t180741: Tensor): Tensor"><wbr />cosh<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#sinh,Tensor"
-    title="sinh(t166757: Tensor): Tensor"><wbr />sinh<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="sinh(t180805: Tensor): Tensor"><wbr />sinh<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#sin,Tensor"
-    title="sin(t166817: Tensor): Tensor"><wbr />sin<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="sin(t180869: Tensor): Tensor"><wbr />sin<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#tan,Tensor"
-    title="tan(t166877: Tensor): Tensor"><wbr />tan<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="tan(t180933: Tensor): Tensor"><wbr />tan<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#tanh,Tensor"
-    title="tanh(t166937: Tensor): Tensor"><wbr />tanh<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="tanh(t180997: Tensor): Tensor"><wbr />tanh<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#erf,Tensor"
-    title="erf(t166997: Tensor): Tensor"><wbr />erf<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="erf(t181061: Tensor): Tensor"><wbr />erf<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#erfc,Tensor"
-    title="erfc(t167057: Tensor): Tensor"><wbr />erfc<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="erfc(t181125: Tensor): Tensor"><wbr />erfc<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#lgamma,Tensor"
-    title="lgamma(t167117: Tensor): Tensor"><wbr />lgamma<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="lgamma(t181189: Tensor): Tensor"><wbr />lgamma<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#tgamma,Tensor"
-    title="tgamma(t167177: Tensor): Tensor"><wbr />tgamma<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="tgamma(t181253: Tensor): Tensor"><wbr />tgamma<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#floor,Tensor"
-    title="floor(t167237: Tensor): Tensor"><wbr />floor<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="floor(t181317: Tensor): Tensor"><wbr />floor<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#ceil,Tensor"
-    title="ceil(t167297: Tensor): Tensor"><wbr />ceil<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="ceil(t181381: Tensor): Tensor"><wbr />ceil<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#trunc,Tensor"
-    title="trunc(t167357: Tensor): Tensor"><wbr />trunc<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="trunc(t181445: Tensor): Tensor"><wbr />trunc<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#round,Tensor"
-    title="round(t167417: Tensor): Tensor"><wbr />round<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="round(t181509: Tensor): Tensor"><wbr />round<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#degToRad,Tensor"
-    title="degToRad(t167477: Tensor): Tensor"><wbr />deg<wbr />To<wbr />Rad<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="degToRad(t181573: Tensor): Tensor"><wbr />deg<wbr />To<wbr />Rad<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#radToDeg,Tensor"
-    title="radToDeg(t167537: Tensor): Tensor"><wbr />rad<wbr />To<wbr />Deg<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="radToDeg(t181637: Tensor): Tensor"><wbr />rad<wbr />To<wbr />Deg<span class="attachedType" style="visibility:hidden"></span></a></li>
 
   </ul>
 </li>
@@ -228,7 +268,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L19" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="fac"><a name="fac,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">fac</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166037</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="fac"><a name="fac,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">fac</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180037</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -237,7 +277,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="sqrt"><a name="sqrt,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">sqrt</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166097</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="sqrt"><a name="sqrt,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">sqrt</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180101</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -246,7 +286,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="cbrt"><a name="cbrt,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">cbrt</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166157</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="cbrt"><a name="cbrt,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">cbrt</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180165</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -255,7 +295,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="ln"><a name="ln,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">ln</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166217</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="ln"><a name="ln,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">ln</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180229</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -264,7 +304,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="log10"><a name="log10,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">log10</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166277</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="log10"><a name="log10,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">log10</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180293</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -273,7 +313,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="log2"><a name="log2,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">log2</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166337</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="log2"><a name="log2,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">log2</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180357</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -282,7 +322,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="exp"><a name="exp,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">exp</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166397</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="exp"><a name="exp,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">exp</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180421</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -291,7 +331,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="arccos"><a name="arccos,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">arccos</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166457</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="arccos"><a name="arccos,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">arccos</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180485</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -300,7 +340,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="arcsin"><a name="arcsin,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">arcsin</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166517</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="arcsin"><a name="arcsin,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">arcsin</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180549</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -309,7 +349,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="arctan"><a name="arctan,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">arctan</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166577</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="arctan"><a name="arctan,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">arctan</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180613</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -318,7 +358,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="cos"><a name="cos,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">cos</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166637</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="cos"><a name="cos,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">cos</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180677</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -327,7 +367,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="cosh"><a name="cosh,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">cosh</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166697</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="cosh"><a name="cosh,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">cosh</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180741</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -336,7 +376,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="sinh"><a name="sinh,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">sinh</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166757</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="sinh"><a name="sinh,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">sinh</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180805</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -345,7 +385,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="sin"><a name="sin,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">sin</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166817</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="sin"><a name="sin,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">sin</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180869</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -354,7 +394,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="tan"><a name="tan,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">tan</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166877</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="tan"><a name="tan,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">tan</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180933</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -363,7 +403,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="tanh"><a name="tanh,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">tanh</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166937</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="tanh"><a name="tanh,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">tanh</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">180997</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -372,7 +412,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="erf"><a name="erf,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">erf</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">166997</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="erf"><a name="erf,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">erf</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">181061</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -381,7 +421,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="erfc"><a name="erfc,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">erfc</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">167057</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="erfc"><a name="erfc,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">erfc</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">181125</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -390,7 +430,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="lgamma"><a name="lgamma,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">lgamma</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">167117</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="lgamma"><a name="lgamma,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">lgamma</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">181189</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -399,7 +439,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="tgamma"><a name="tgamma,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">tgamma</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">167177</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="tgamma"><a name="tgamma,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">tgamma</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">181253</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -408,7 +448,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="floor"><a name="floor,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">floor</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">167237</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="floor"><a name="floor,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">floor</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">181317</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -417,7 +457,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="ceil"><a name="ceil,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">ceil</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">167297</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="ceil"><a name="ceil,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">ceil</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">181381</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -426,7 +466,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="trunc"><a name="trunc,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">trunc</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">167357</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="trunc"><a name="trunc,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">trunc</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">181445</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -435,7 +475,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="round"><a name="round,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">round</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">167417</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="round"><a name="round,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">round</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">181509</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -444,7 +484,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="degToRad"><a name="degToRad,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">degToRad</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">167477</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="degToRad"><a name="degToRad,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">degToRad</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">181573</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -453,7 +493,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/ufunc.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="radToDeg"><a name="radToDeg,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">radToDeg</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">167537</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="radToDeg"><a name="radToDeg,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">radToDeg</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">181637</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -497,7 +537,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2017-12-13 23:30:11 UTC</small>
+        <small>Made with Nim. Generated: 2018-05-05 17:09:51 UTC</small>
       </div>
     </div>
   </div>

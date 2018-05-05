@@ -28,22 +28,69 @@
           <li><a href="tensor.comparison.html">tensor.comparison</a></li>
           <li><a href="tensor.data_structure.html">tensor.data_structure</a></li>
           <li><a href="tensor.display.html">tensor.display</a></li>
+          <li><a href="tensor.display_cuda.html">tensor.display_cuda</a></li>
           <li><a href="tensor.exporting.html">tensor.exporting</a></li>
           <li><a href="tensor.filling_data.html">tensor.filling_data</a></li>
           <li><a href="tensor.higher_order_applymap.html">tensor.higher_order_applymap</a></li>
           <li><a href="tensor.higher_order_foldreduce.html">tensor.higher_order_foldreduce</a></li>
           <li><a href="tensor.init_cpu.html">tensor.init_cpu</a></li>
+          <li><a href="tensor.init_cuda.html">tensor.init_cuda</a></li>
+          <li><a href="tensor.init_opencl.html">tensor.init_opencl</a></li>
           <li><a href="tensor.init_copy_cpu.html">tensor.init_copy_cpu</a></li>
+          <li><a href="tensor.init_copy_cuda.html">tensor.init_copy_cuda</a></li>
           <li><a href="tensor.lapack.html">tensor.lapack</a></li>
           <li><a href="tensor.math_functions.html">tensor.math_functions</a></li>
           <li><a href="tensor.operators_blas_l1.html">tensor.operators_blas_l1</a></li>
+          <li><a href="tensor.operators_blas_l1_cuda.html">tensor.operators_blas_l1_cuda</a></li>
+          <li><a href="tensor.operators_blas_l1_opencl.html">tensor.operators_blas_l1_opencl</a></li>
           <li><a href="tensor.operators_blas_l2l3.html">tensor.operators_blas_l2l3</a></li>
+          <li><a href="tensor.operators_blas_l2l3_cuda.html">tensor.operators_blas_l2l3_cuda</a></li>
+          <li><a href="tensor.operators_blas_l2l3_opencl.html">tensor.operators_blas_l2l3_opencl</a></li>
           <li><a href="tensor.operators_broadcasted.html">tensor.operators_broadcasted</a></li>
+          <li><a href="tensor.operators_broadcasted_cuda.html">tensor.operators_broadcasted_cuda</a></li>
+          <li><a href="tensor.operators_broadcasted_opencl.html">tensor.operators_broadcasted_opencl</a></li>
+          <li><a href="tensor.operators_comparison.html">tensor.operators_comparison</a></li>
           <li><a href="tensor.operators_logical.html">tensor.operators_logical</a></li>
           <li><a href="tensor.optim_ops_fusion.html">tensor.optim_ops_fusion</a></li>
           <li><a href="tensor.shapeshifting.html">tensor.shapeshifting</a></li>
+          <li><a href="tensor.shapeshifting_cuda.html">tensor.shapeshifting_cuda</a></li>
+          <li><a href="tensor.shapeshifting_opencl.html">tensor.shapeshifting_opencl</a></li>
           <li><a href="tensor.syntactic_sugar.html">tensor.syntactic_sugar</a></li>
           <li><a href="tensor.ufunc.html">tensor.ufunc</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Neural network API</a>
+        <ul class="monospace">
+          <li><a href="nn_dsl.dsl_core.html">Neural network: Declaration</a></li>
+          <li><a href="nn_activation.relu.html">Activation: Relu (Rectified linear Unit)</a></li>
+          <li><a href="nn_activation.sigmoid.html">Activation: Sigmoid</a></li>
+          <li><a href="nn_activation.tanh.html">Activation: Tanh</a></li>
+          <li><a href="nn_layers.conv2D.html">Layers: Convolution 2D</a></li>
+          <li><a href="nn_layers.linear.html">Layers: Linear/Dense</a></li>
+          <li><a href="nn_layers.maxpool2D.html">Layers: Maxpool 2D</a></li>
+          <li><a href="nn_loss.cross_entropy_losses.html">Loss: Cross-Entropy losses</a></li>
+          <li><a href="nn_loss.mean_square_error_loss.html">Loss: Mean Square Error</a></li>
+          <li><a href="nn_optimizers.optimizers.html">Optimizers</a></li>
+          <li><a href="nn_shapeshifting.reshape_flatten.html">Reshape & Flatten</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Linear algebra, stats, ML</a>
+        <ul class="monospace">
+          <li><a href="la.decomposition.html">Eigenvalue decomposition</a></li>
+          <li><a href="la.least_squares.html">Least Squares solver</a></li>
+          <li><a href="stats.stats.html">Statistics</a></li>
+          <li><a href="ml.pca.html">Principal Component Analysis (PCA)</a></li>
+          <li><a href="ml.accuracy_score.html">Accuracy score</a></li>
+          <li><a href="ml.common_error_functions.html">Common errors, MAE and MSE (L1, L2 loss)</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">IO & Datasets</a>
+        <ul class="monospace">
+          <li><a href="datasets.mnist.html">MNIST</a></li>
+          <li><a href="io.io_csv.html">CSV reading and writing</a></li>
         </ul>
       </span>
       <span>
@@ -57,24 +104,17 @@
         </ul>
       </span>
       <span>
-        <a href="#">Neural network API</a>
-        <ul class="monospace">
-          <li><a href="nn_activation.relu.html">Activation: Relu (Rectified linear Unit)</a></li>
-          <li><a href="nn_activation.sigmoid.html">Activation: Sigmoid</a></li>
-          <li><a href="nn_layers.conv2D.html">Layers: Convolution</a></li>
-          <li><a href="nn_layers.conv2D.html">Layers: Linear/Dense</a></li>
-          <li><a href="nn_loss.sigmoid_cross_entropy.html">Loss: Sigmoid Cross-Entropy</a></li>
-          <li><a href="nn_optimizers.optimizers.html">Optimizers</a></li>
-        </ul>
-      </span>
-      <span>
         <a href="#">Neuralnet primitives</a>
         <ul class="monospace">
-          <li><a href="nnp.nnp_activation.html">Activation</a></li>
-          <li><a href="nnp.nnp_convolution.html">Convolution</a></li>
+          <li><a href="nnp.nnp_activation.html">Activations</a></li>
+          <li><a href="nnp.nnp_convolution.html">Convolution 2D</a></li>
+          <li><a href="nnp.nnp_conv2D_cudnn.html">Convolution 2D - CuDNN</a></li>
           <li><a href="nnp.nnp_linear.html">Linear / Dense layer</a></li>
+          <li><a href="nnp.nnp_maxpooling.html">Maxpooling</a></li>
+          <li><a href="nnp.nnp_numerical_gradient.html">Numerical gradient</a></li>
           <li><a href="nnp.nnp_sigmoid_cross_entropy.html">Sigmoid Cross-Entropy loss</a></li>
           <li><a href="nnp.nnp_softmax_cross_entropy.html">Softmax Cross-Entropy loss</a></li>
+          <li><a href="nnp.nnp_softmax.html">Softmax</a></li>
         </ul>
       </span>
     </ul>
@@ -116,7 +156,7 @@
     <ul class="simple">
     </ul>
   </div>
-  <div id="searchInput">
+  <div id="searchInputDiv">
     Search: <input type="text" id="searchInput"
       onkeyup="search()" />
   </div>
@@ -155,9 +195,9 @@
   <a class="reference reference-toplevel" href="#14" id="64">Methods</a>
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#forward.e,ReluActivation[TT],Variable[TT]"
-    title="forward[TT](self: ReluActivation[TT]; a: Variable[TT]): Variable[TT]"><wbr />forward<span class="attachedType" style="visibility:hidden">ReluActivation</span></a></li>
+    title="forward[TT](self: ReluActivation[TT]; a: Variable[TT]): Variable[TT]"><wbr />forward<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#backward.e,ReluActivation[TT],TT"
-    title="backward[TT](self: ReluActivation[TT]; gradient: TT): SmallDiffs[TT]"><wbr />backward<span class="attachedType" style="visibility:hidden">ReluActivation</span></a></li>
+    title="backward[TT](self: ReluActivation[TT]; gradient: TT): SmallDiffs[TT]"><wbr />backward<span class="attachedType" style="visibility:hidden"></span></a></li>
 
   </ul>
 </li>
@@ -171,20 +211,20 @@
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">Imports</a></h1>
 <dl class="item">
-<a class="reference external" href="../../private/ast_utils.html">../../private/ast_utils</a>, <a class="reference external" href="../../tensor/tensor.html">../../tensor/tensor</a>, <a class="reference external" href="../../nn_primitives/nn_primitives.html">../../nn_primitives/nn_primitives</a>, <a class="reference external" href="../../autograd/autograd.html">../../autograd/autograd</a>
+<a class="reference external" href="../../tensor/tensor.html">../../tensor/tensor</a>, <a class="reference external" href="../../nn_primitives/nn_primitives.html">../../nn_primitives/nn_primitives</a>, <a class="reference external" href="../../autograd/autograd.html">../../autograd/autograd</a>
 </dl></div>
 <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">Types</a></h1>
 <dl class="item">
-<dt id="ReluActivation"><a name="ReluActivation"></a><pre><span class="Identifier">ReluActivation</span><span class="Other">[</span><span class="Identifier">TT</span><span class="Other">]</span> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">Gate</span><span class="Other">[</span><span class="Identifier">TT</span><span class="Other">]</span>
+<dt id="ReluActivation"><a name="ReluActivation"></a><pre><span class="Identifier">ReluActivation</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">final</span></div><span class="Other pragmaend">.}</span><span class="Other">[</span><span class="Identifier">TT</span><span class="Other">]</span> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">Gate</span><span class="Other">[</span><span class="Identifier">TT</span><span class="Other">]</span>
   <span class="Identifier">cache</span><span class="Other">:</span> <span class="Identifier">TT</span>
 </pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/nn/activation/relu.nim#L20"
+href="https://github.com/mratsim/arraymancer/tree/master/src/nn/activation/relu.nim#L19"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/activation/relu.nim#L20" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/activation/relu.nim#L19" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -201,9 +241,9 @@ class="link-seesrc" target="_blank">Source</a>
 </dl>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/nn/activation/relu.nim#L33"
+href="https://github.com/mratsim/arraymancer/tree/master/src/nn/activation/relu.nim#L31"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/activation/relu.nim#L33" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/activation/relu.nim#L31" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -216,9 +256,9 @@ class="link-seesrc" target="_blank">Source</a>
 <dd>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/nn/activation/relu.nim#L23"
+href="https://github.com/mratsim/arraymancer/tree/master/src/nn/activation/relu.nim#L22"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/activation/relu.nim#L23" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/activation/relu.nim#L22" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="backward"><a name="backward.e,ReluActivation[TT],TT"></a><pre><span class="Keyword">method</span> <span class="Identifier">backward</span><span class="Other">[</span><span class="Identifier">TT</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <span class="Identifier">ReluActivation</span><span class="Other">[</span><span class="Identifier">TT</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">gradient</span><span class="Other">:</span> <span class="Identifier">TT</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">SmallDiffs</span><span class="Other">[</span><span class="Identifier">TT</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span>
@@ -226,9 +266,9 @@ class="link-seesrc" target="_blank">Source</a>
 <dd>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/nn/activation/relu.nim#L30"
+href="https://github.com/mratsim/arraymancer/tree/master/src/nn/activation/relu.nim#L28"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/activation/relu.nim#L30" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/activation/relu.nim#L28" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -241,7 +281,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2017-12-13 23:30:33 UTC</small>
+        <small>Made with Nim. Generated: 2018-05-05 17:10:56 UTC</small>
       </div>
     </div>
   </div>

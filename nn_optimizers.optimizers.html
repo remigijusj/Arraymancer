@@ -28,22 +28,69 @@
           <li><a href="tensor.comparison.html">tensor.comparison</a></li>
           <li><a href="tensor.data_structure.html">tensor.data_structure</a></li>
           <li><a href="tensor.display.html">tensor.display</a></li>
+          <li><a href="tensor.display_cuda.html">tensor.display_cuda</a></li>
           <li><a href="tensor.exporting.html">tensor.exporting</a></li>
           <li><a href="tensor.filling_data.html">tensor.filling_data</a></li>
           <li><a href="tensor.higher_order_applymap.html">tensor.higher_order_applymap</a></li>
           <li><a href="tensor.higher_order_foldreduce.html">tensor.higher_order_foldreduce</a></li>
           <li><a href="tensor.init_cpu.html">tensor.init_cpu</a></li>
+          <li><a href="tensor.init_cuda.html">tensor.init_cuda</a></li>
+          <li><a href="tensor.init_opencl.html">tensor.init_opencl</a></li>
           <li><a href="tensor.init_copy_cpu.html">tensor.init_copy_cpu</a></li>
+          <li><a href="tensor.init_copy_cuda.html">tensor.init_copy_cuda</a></li>
           <li><a href="tensor.lapack.html">tensor.lapack</a></li>
           <li><a href="tensor.math_functions.html">tensor.math_functions</a></li>
           <li><a href="tensor.operators_blas_l1.html">tensor.operators_blas_l1</a></li>
+          <li><a href="tensor.operators_blas_l1_cuda.html">tensor.operators_blas_l1_cuda</a></li>
+          <li><a href="tensor.operators_blas_l1_opencl.html">tensor.operators_blas_l1_opencl</a></li>
           <li><a href="tensor.operators_blas_l2l3.html">tensor.operators_blas_l2l3</a></li>
+          <li><a href="tensor.operators_blas_l2l3_cuda.html">tensor.operators_blas_l2l3_cuda</a></li>
+          <li><a href="tensor.operators_blas_l2l3_opencl.html">tensor.operators_blas_l2l3_opencl</a></li>
           <li><a href="tensor.operators_broadcasted.html">tensor.operators_broadcasted</a></li>
+          <li><a href="tensor.operators_broadcasted_cuda.html">tensor.operators_broadcasted_cuda</a></li>
+          <li><a href="tensor.operators_broadcasted_opencl.html">tensor.operators_broadcasted_opencl</a></li>
+          <li><a href="tensor.operators_comparison.html">tensor.operators_comparison</a></li>
           <li><a href="tensor.operators_logical.html">tensor.operators_logical</a></li>
           <li><a href="tensor.optim_ops_fusion.html">tensor.optim_ops_fusion</a></li>
           <li><a href="tensor.shapeshifting.html">tensor.shapeshifting</a></li>
+          <li><a href="tensor.shapeshifting_cuda.html">tensor.shapeshifting_cuda</a></li>
+          <li><a href="tensor.shapeshifting_opencl.html">tensor.shapeshifting_opencl</a></li>
           <li><a href="tensor.syntactic_sugar.html">tensor.syntactic_sugar</a></li>
           <li><a href="tensor.ufunc.html">tensor.ufunc</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Neural network API</a>
+        <ul class="monospace">
+          <li><a href="nn_dsl.dsl_core.html">Neural network: Declaration</a></li>
+          <li><a href="nn_activation.relu.html">Activation: Relu (Rectified linear Unit)</a></li>
+          <li><a href="nn_activation.sigmoid.html">Activation: Sigmoid</a></li>
+          <li><a href="nn_activation.tanh.html">Activation: Tanh</a></li>
+          <li><a href="nn_layers.conv2D.html">Layers: Convolution 2D</a></li>
+          <li><a href="nn_layers.linear.html">Layers: Linear/Dense</a></li>
+          <li><a href="nn_layers.maxpool2D.html">Layers: Maxpool 2D</a></li>
+          <li><a href="nn_loss.cross_entropy_losses.html">Loss: Cross-Entropy losses</a></li>
+          <li><a href="nn_loss.mean_square_error_loss.html">Loss: Mean Square Error</a></li>
+          <li><a href="nn_optimizers.optimizers.html">Optimizers</a></li>
+          <li><a href="nn_shapeshifting.reshape_flatten.html">Reshape & Flatten</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Linear algebra, stats, ML</a>
+        <ul class="monospace">
+          <li><a href="la.decomposition.html">Eigenvalue decomposition</a></li>
+          <li><a href="la.least_squares.html">Least Squares solver</a></li>
+          <li><a href="stats.stats.html">Statistics</a></li>
+          <li><a href="ml.pca.html">Principal Component Analysis (PCA)</a></li>
+          <li><a href="ml.accuracy_score.html">Accuracy score</a></li>
+          <li><a href="ml.common_error_functions.html">Common errors, MAE and MSE (L1, L2 loss)</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">IO & Datasets</a>
+        <ul class="monospace">
+          <li><a href="datasets.mnist.html">MNIST</a></li>
+          <li><a href="io.io_csv.html">CSV reading and writing</a></li>
         </ul>
       </span>
       <span>
@@ -57,24 +104,17 @@
         </ul>
       </span>
       <span>
-        <a href="#">Neural network API</a>
-        <ul class="monospace">
-          <li><a href="nn_activation.relu.html">Activation: Relu (Rectified linear Unit)</a></li>
-          <li><a href="nn_activation.sigmoid.html">Activation: Sigmoid</a></li>
-          <li><a href="nn_layers.conv2D.html">Layers: Convolution</a></li>
-          <li><a href="nn_layers.conv2D.html">Layers: Linear/Dense</a></li>
-          <li><a href="nn_loss.sigmoid_cross_entropy.html">Loss: Sigmoid Cross-Entropy</a></li>
-          <li><a href="nn_optimizers.optimizers.html">Optimizers</a></li>
-        </ul>
-      </span>
-      <span>
         <a href="#">Neuralnet primitives</a>
         <ul class="monospace">
-          <li><a href="nnp.nnp_activation.html">Activation</a></li>
-          <li><a href="nnp.nnp_convolution.html">Convolution</a></li>
+          <li><a href="nnp.nnp_activation.html">Activations</a></li>
+          <li><a href="nnp.nnp_convolution.html">Convolution 2D</a></li>
+          <li><a href="nnp.nnp_conv2D_cudnn.html">Convolution 2D - CuDNN</a></li>
           <li><a href="nnp.nnp_linear.html">Linear / Dense layer</a></li>
+          <li><a href="nnp.nnp_maxpooling.html">Maxpooling</a></li>
+          <li><a href="nnp.nnp_numerical_gradient.html">Numerical gradient</a></li>
           <li><a href="nnp.nnp_sigmoid_cross_entropy.html">Sigmoid Cross-Entropy loss</a></li>
           <li><a href="nnp.nnp_softmax_cross_entropy.html">Softmax Cross-Entropy loss</a></li>
+          <li><a href="nnp.nnp_softmax.html">Softmax</a></li>
         </ul>
       </span>
     </ul>
@@ -116,7 +156,7 @@
     <ul class="simple">
     </ul>
   </div>
-  <div id="searchInput">
+  <div id="searchInputDiv">
     Search: <input type="text" id="searchInput"
       onkeyup="search()" />
   </div>
@@ -137,12 +177,10 @@
 <li>
   <a class="reference reference-toplevel" href="#7" id="57">Types</a>
   <ul class="simple simple-toc-section">
-      <li><a class="reference" href="#Optimizer"
-    title="Optimizer[T] = ref object
-  params*: seq[Variable[Tensor[T]]]
-  lr*: T"><wbr />Optimizer<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#SGD"
-    title="SGD[T] = ref object of Optimizer[T]"><wbr />SGD<span class="attachedType" style="visibility:hidden"></span></a></li>
+      <li><a class="reference" href="#Sgd"
+    title="Sgd[TT] = object
+  params*: seq[Variable[TT]]
+  lr*: float32"><wbr />Sgd<span class="attachedType" style="visibility:hidden"></span></a></li>
 
   </ul>
 </li>
@@ -150,19 +188,19 @@
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#zeroGrads,Optimizer"
-    title="zeroGrads(o: Optimizer)"><wbr />zero<wbr />Grads<span class="attachedType" style="visibility:hidden">Optimizer</span></a></li>
+    title="zeroGrads(o: Optimizer)"><wbr />zero<wbr />Grads<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#newSGD,varargs[Variable[Tensor[T]]],T"
-    title="newSGD[T](params: varargs[Variable[Tensor[T]]]; learning_rate: T): SGD[T]"><wbr />new<wbr />SGD<span class="attachedType" style="visibility:hidden">SGD</span></a></li>
+    title="newSGD[T](params: varargs[Variable[Tensor[T]]]; learning_rate: T): Sgd[Tensor[T]]"><wbr />new<wbr />SGD<span class="attachedType" style="visibility:hidden">Sgd</span></a></li>
+  <li><a class="reference" href="#update,Sgd"
+    title="update(self: Sgd)"><wbr />update<span class="attachedType" style="visibility:hidden">Sgd</span></a></li>
 
   </ul>
 </li>
 <li>
-  <a class="reference reference-toplevel" href="#14" id="64">Methods</a>
+  <a class="reference reference-toplevel" href="#13" id="63">Funcs</a>
   <ul class="simple simple-toc-section">
-      <li><a class="reference" href="#update.e,Optimizer[T]"
-    title="update[T](self: Optimizer[T])"><wbr />update<span class="attachedType" style="visibility:hidden">Optimizer</span></a></li>
-  <li><a class="reference" href="#update.e,SGD[T]"
-    title="update[T](self: SGD[T])"><wbr />update<span class="attachedType" style="visibility:hidden">SGD</span></a></li>
+      <li><a class="reference" href="#optimizerSGD,M,SomeFloat"
+    title="optimizerSGD[M](model: M; learning_rate: SomeFloat): Sgd[Tensor[SomeFloat]]"><wbr />optimizer<wbr />SGD<span class="attachedType" style="visibility:hidden">Sgd</span></a></li>
 
   </ul>
 </li>
@@ -176,30 +214,21 @@
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">Imports</a></h1>
 <dl class="item">
-<a class="reference external" href="../../tensor/tensor.html">../../tensor/tensor</a>, <a class="reference external" href="../../tensor/higher_order_applymap.html">../../tensor/higher_order_applymap</a>, <a class="reference external" href="../../autograd/autograd.html">../../autograd/autograd</a>, <a class="reference external" href="typetraits.html">typetraits</a>
+<a class="reference external" href="../../tensor/tensor.html">../../tensor/tensor</a>, <a class="reference external" href="../../tensor/higher_order_applymap.html">../../tensor/higher_order_applymap</a>, <a class="reference external" href="../../autograd/autograd.html">../../autograd/autograd</a>
 </dl></div>
 <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">Types</a></h1>
 <dl class="item">
-<dt id="Optimizer"><a name="Optimizer"></a><pre><span class="Identifier">Optimizer</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">inheritable</span></div><span class="Other pragmaend">.}</span>
-  <span class="Identifier">params</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">Variable</span><span class="Other">[</span><span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">]</span><span class="Other">]</span>
-  <span class="Identifier">lr</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">T</span>
+<dt id="Sgd"><a name="Sgd"></a><pre><span class="Identifier">Sgd</span><span class="Other">[</span><span class="Identifier">TT</span><span class="Other">]</span> <span class="Other">=</span> <span class="Keyword">object</span>
+  <span class="Identifier">params</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">Variable</span><span class="Other">[</span><span class="Identifier">TT</span><span class="Other">]</span><span class="Other">]</span>
+  <span class="Identifier">lr</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">float32</span>
 </pre></dt>
 <dd>
-
+Stochastic gradient descent
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/nn/optimizers/optimizers.nim#L20"
+href="https://github.com/mratsim/arraymancer/tree/master/src/nn/optimizers/optimizers.nim#L19"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/optimizers/optimizers.nim#L20" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-<dt id="SGD"><a name="SGD"></a><pre><span class="Identifier">SGD</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">Optimizer</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span></pre></dt>
-<dd>
-
-&nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/nn/optimizers/optimizers.nim#L34"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/optimizers/optimizers.nim#L34" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/optimizers/optimizers.nim#L19" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -211,41 +240,42 @@ class="link-seesrc" target="_blank">Source</a>
 <dd>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/nn/optimizers/optimizers.nim#L29"
+href="https://github.com/mratsim/arraymancer/tree/master/src/nn/optimizers/optimizers.nim#L26"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/optimizers/optimizers.nim#L29" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/optimizers/optimizers.nim#L26" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="newSGD"><a name="newSGD,varargs[Variable[Tensor[T]]],T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">newSGD</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">params</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">Variable</span><span class="Other">[</span><span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">]</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">learning_rate</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">SGD</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span></pre></dt>
+<dt id="newSGD"><a name="newSGD,varargs[Variable[Tensor[T]]],T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">newSGD</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">params</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">Variable</span><span class="Other">[</span><span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">]</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">learning_rate</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Sgd</span><span class="Other">[</span><span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma">
+    <span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">&quot;Use the optimizer macro instead&quot;</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/nn/optimizers/optimizers.nim#L36"
+href="https://github.com/mratsim/arraymancer/tree/master/src/nn/optimizers/optimizers.nim#L31"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/optimizers/optimizers.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/optimizers/optimizers.nim#L31" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<dt id="update"><a name="update,Sgd"></a><pre><span class="Keyword">proc</span> <span class="Identifier">update</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <span class="Identifier">Sgd</span><span class="Other">)</span></pre></dt>
+<dd>
+
+&nbsp;&nbsp;<a
+href="https://github.com/mratsim/arraymancer/tree/master/src/nn/optimizers/optimizers.nim#L34"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/optimizers/optimizers.nim#L34" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
 </dl></div>
-<div class="section" id="14">
-<h1><a class="toc-backref" href="#14">Methods</a></h1>
+<div class="section" id="13">
+<h1><a class="toc-backref" href="#13">Funcs</a></h1>
 <dl class="item">
-<dt id="update"><a name="update.e,Optimizer[T]"></a><pre><span class="Keyword">method</span> <span class="Identifier">update</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <span class="Identifier">Optimizer</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">base</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="optimizerSGD"><a name="optimizerSGD,M,SomeFloat"></a><pre><span class="Keyword">func</span> <span class="Identifier">optimizerSGD</span><span class="Other">[</span><span class="Identifier">M</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">model</span><span class="Other">:</span> <span class="Identifier">M</span><span class="Other">;</span> <span class="Identifier">learning_rate</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Sgd</span><span class="Other">[</span><span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">]</span></pre></dt>
 <dd>
-
+Create a SGD optimizer that will update the model weight
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/nn/optimizers/optimizers.nim#L25"
+href="https://github.com/mratsim/arraymancer/tree/master/src/nn/optimizers/optimizers.nim#L43"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/optimizers/optimizers.nim#L25" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-<dt id="update"><a name="update.e,SGD[T]"></a><pre><span class="Keyword">method</span> <span class="Identifier">update</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <span class="Identifier">SGD</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
-<dd>
-
-&nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/nn/optimizers/optimizers.nim#L39"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/optimizers/optimizers.nim#L39" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/nn/optimizers/optimizers.nim#L43" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -258,7 +288,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2017-12-13 23:30:37 UTC</small>
+        <small>Made with Nim. Generated: 2018-05-05 17:11:10 UTC</small>
       </div>
     </div>
   </div>

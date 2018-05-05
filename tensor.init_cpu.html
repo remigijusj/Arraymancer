@@ -28,22 +28,69 @@
           <li><a href="tensor.comparison.html">tensor.comparison</a></li>
           <li><a href="tensor.data_structure.html">tensor.data_structure</a></li>
           <li><a href="tensor.display.html">tensor.display</a></li>
+          <li><a href="tensor.display_cuda.html">tensor.display_cuda</a></li>
           <li><a href="tensor.exporting.html">tensor.exporting</a></li>
           <li><a href="tensor.filling_data.html">tensor.filling_data</a></li>
           <li><a href="tensor.higher_order_applymap.html">tensor.higher_order_applymap</a></li>
           <li><a href="tensor.higher_order_foldreduce.html">tensor.higher_order_foldreduce</a></li>
           <li><a href="tensor.init_cpu.html">tensor.init_cpu</a></li>
+          <li><a href="tensor.init_cuda.html">tensor.init_cuda</a></li>
+          <li><a href="tensor.init_opencl.html">tensor.init_opencl</a></li>
           <li><a href="tensor.init_copy_cpu.html">tensor.init_copy_cpu</a></li>
+          <li><a href="tensor.init_copy_cuda.html">tensor.init_copy_cuda</a></li>
           <li><a href="tensor.lapack.html">tensor.lapack</a></li>
           <li><a href="tensor.math_functions.html">tensor.math_functions</a></li>
           <li><a href="tensor.operators_blas_l1.html">tensor.operators_blas_l1</a></li>
+          <li><a href="tensor.operators_blas_l1_cuda.html">tensor.operators_blas_l1_cuda</a></li>
+          <li><a href="tensor.operators_blas_l1_opencl.html">tensor.operators_blas_l1_opencl</a></li>
           <li><a href="tensor.operators_blas_l2l3.html">tensor.operators_blas_l2l3</a></li>
+          <li><a href="tensor.operators_blas_l2l3_cuda.html">tensor.operators_blas_l2l3_cuda</a></li>
+          <li><a href="tensor.operators_blas_l2l3_opencl.html">tensor.operators_blas_l2l3_opencl</a></li>
           <li><a href="tensor.operators_broadcasted.html">tensor.operators_broadcasted</a></li>
+          <li><a href="tensor.operators_broadcasted_cuda.html">tensor.operators_broadcasted_cuda</a></li>
+          <li><a href="tensor.operators_broadcasted_opencl.html">tensor.operators_broadcasted_opencl</a></li>
+          <li><a href="tensor.operators_comparison.html">tensor.operators_comparison</a></li>
           <li><a href="tensor.operators_logical.html">tensor.operators_logical</a></li>
           <li><a href="tensor.optim_ops_fusion.html">tensor.optim_ops_fusion</a></li>
           <li><a href="tensor.shapeshifting.html">tensor.shapeshifting</a></li>
+          <li><a href="tensor.shapeshifting_cuda.html">tensor.shapeshifting_cuda</a></li>
+          <li><a href="tensor.shapeshifting_opencl.html">tensor.shapeshifting_opencl</a></li>
           <li><a href="tensor.syntactic_sugar.html">tensor.syntactic_sugar</a></li>
           <li><a href="tensor.ufunc.html">tensor.ufunc</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Neural network API</a>
+        <ul class="monospace">
+          <li><a href="nn_dsl.dsl_core.html">Neural network: Declaration</a></li>
+          <li><a href="nn_activation.relu.html">Activation: Relu (Rectified linear Unit)</a></li>
+          <li><a href="nn_activation.sigmoid.html">Activation: Sigmoid</a></li>
+          <li><a href="nn_activation.tanh.html">Activation: Tanh</a></li>
+          <li><a href="nn_layers.conv2D.html">Layers: Convolution 2D</a></li>
+          <li><a href="nn_layers.linear.html">Layers: Linear/Dense</a></li>
+          <li><a href="nn_layers.maxpool2D.html">Layers: Maxpool 2D</a></li>
+          <li><a href="nn_loss.cross_entropy_losses.html">Loss: Cross-Entropy losses</a></li>
+          <li><a href="nn_loss.mean_square_error_loss.html">Loss: Mean Square Error</a></li>
+          <li><a href="nn_optimizers.optimizers.html">Optimizers</a></li>
+          <li><a href="nn_shapeshifting.reshape_flatten.html">Reshape & Flatten</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">Linear algebra, stats, ML</a>
+        <ul class="monospace">
+          <li><a href="la.decomposition.html">Eigenvalue decomposition</a></li>
+          <li><a href="la.least_squares.html">Least Squares solver</a></li>
+          <li><a href="stats.stats.html">Statistics</a></li>
+          <li><a href="ml.pca.html">Principal Component Analysis (PCA)</a></li>
+          <li><a href="ml.accuracy_score.html">Accuracy score</a></li>
+          <li><a href="ml.common_error_functions.html">Common errors, MAE and MSE (L1, L2 loss)</a></li>
+        </ul>
+      </span>
+      <span>
+        <a href="#">IO & Datasets</a>
+        <ul class="monospace">
+          <li><a href="datasets.mnist.html">MNIST</a></li>
+          <li><a href="io.io_csv.html">CSV reading and writing</a></li>
         </ul>
       </span>
       <span>
@@ -57,24 +104,17 @@
         </ul>
       </span>
       <span>
-        <a href="#">Neural network API</a>
-        <ul class="monospace">
-          <li><a href="nn_activation.relu.html">Activation: Relu (Rectified linear Unit)</a></li>
-          <li><a href="nn_activation.sigmoid.html">Activation: Sigmoid</a></li>
-          <li><a href="nn_layers.conv2D.html">Layers: Convolution</a></li>
-          <li><a href="nn_layers.conv2D.html">Layers: Linear/Dense</a></li>
-          <li><a href="nn_loss.sigmoid_cross_entropy.html">Loss: Sigmoid Cross-Entropy</a></li>
-          <li><a href="nn_optimizers.optimizers.html">Optimizers</a></li>
-        </ul>
-      </span>
-      <span>
         <a href="#">Neuralnet primitives</a>
         <ul class="monospace">
-          <li><a href="nnp.nnp_activation.html">Activation</a></li>
-          <li><a href="nnp.nnp_convolution.html">Convolution</a></li>
+          <li><a href="nnp.nnp_activation.html">Activations</a></li>
+          <li><a href="nnp.nnp_convolution.html">Convolution 2D</a></li>
+          <li><a href="nnp.nnp_conv2D_cudnn.html">Convolution 2D - CuDNN</a></li>
           <li><a href="nnp.nnp_linear.html">Linear / Dense layer</a></li>
+          <li><a href="nnp.nnp_maxpooling.html">Maxpooling</a></li>
+          <li><a href="nnp.nnp_numerical_gradient.html">Numerical gradient</a></li>
           <li><a href="nnp.nnp_sigmoid_cross_entropy.html">Sigmoid Cross-Entropy loss</a></li>
           <li><a href="nnp.nnp_softmax_cross_entropy.html">Softmax Cross-Entropy loss</a></li>
+          <li><a href="nnp.nnp_softmax.html">Softmax</a></li>
         </ul>
       </span>
     </ul>
@@ -116,7 +156,7 @@
     <ul class="simple">
     </ul>
   </div>
-  <div id="searchInput">
+  <div id="searchInputDiv">
     Search: <input type="text" id="searchInput"
       onkeyup="search()" />
   </div>
@@ -145,6 +185,8 @@
     title="newTensor[T](shape: varargs[int]): Tensor[T]"><wbr />new<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#newTensorWith,varargs[int],T"
     title="newTensorWith[T](shape: varargs[int]; value: T): Tensor[T]"><wbr />new<wbr />Tensor<wbr />With<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#newTensorWith,MetadataArray,T"
+    title="newTensorWith[T](shape: MetadataArray; value: T): Tensor[T]"><wbr />new<wbr />Tensor<wbr />With<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#toTensor,openArray,int"
     title="toTensor(s: openArray; dummy_bugfix: static[int] = 0): auto"><wbr />to<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#toTensor,string"
@@ -162,13 +204,13 @@
   <li><a class="reference" href="#ones_like,Tensor[T: SomeNumber]"
     title="ones_like[T: SomeNumber](t: Tensor[T]): Tensor[T]"><wbr />ones_<wbr />like<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#randomTensor,varargs[int],T"
-    title="randomTensor[T: SomeReal](shape: varargs[int]; max: T): Tensor[T]"><wbr />random<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="randomTensor[T: SomeFloat](shape: varargs[int]; max: T): Tensor[T]"><wbr />random<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#randomTensor,varargs[int],int"
     title="randomTensor(shape: varargs[int]; max: int): Tensor[int]"><wbr />random<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#randomTensor,varargs[int],Slice[T]"
     title="randomTensor[T](shape: varargs[int]; slice: Slice[T]): Tensor[T]"><wbr />random<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#randomNormalTensor,varargs[int],T,T"
-    title="randomNormalTensor[T: SomeReal](shape: varargs[int]; mean: T = 0; std: T = 1): Tensor[T]"><wbr />random<wbr />Normal<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="randomNormalTensor[T: SomeFloat](shape: varargs[int]; mean: T = 0; std: T = 1): Tensor[T]"><wbr />random<wbr />Normal<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
 
   </ul>
 </li>
@@ -199,7 +241,7 @@ Creates a new Tensor on Cpu backend<dl class="docutils"><dt>Input:</dt>
 </ul>
 </dd>
 <dt>Warning ⚠</dt>
-<dd>Tensor data is uninitialized an contains garbage.</dd>
+<dd>Tensor data is uninitialized and contains garbage.</dd>
 </dl>
 
 &nbsp;&nbsp;<a
@@ -221,7 +263,7 @@ Creates a new Tensor on Cpu backend<dl class="docutils"><dt>Input:</dt>
 </ul>
 </dd>
 <dt>Warning ⚠</dt>
-<dd>Tensor data is uninitialized an contains garbage.</dd>
+<dd>Tensor data is uninitialized and contains garbage.</dd>
 </dl>
 
 &nbsp;&nbsp;<a
@@ -249,8 +291,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L49" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="newTensorWith"><a name="newTensorWith,varargs[int],T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">newTensorWith</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">noInit</span><span class="Other">,</span>
-    <span class="Identifier">inline</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="newTensorWith"><a name="newTensorWith,varargs[int],T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">newTensorWith</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Creates a new Tensor filled with the given value<dl class="docutils"><dt>Input:</dt>
 <dd><ul class="simple"><li>Shape of the Tensor</li>
@@ -270,6 +311,26 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L60" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
+<dt id="newTensorWith"><a name="newTensorWith,MetadataArray,T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">newTensorWith</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">MetadataArray</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dd>
+Creates a new Tensor filled with the given value<dl class="docutils"><dt>Input:</dt>
+<dd><ul class="simple"><li>Shape of the Tensor</li>
+<li>Type of its elements</li>
+<li>Value to initialize its elements</li>
+</ul>
+</dd>
+<dt>Result:</dt>
+<dd><ul class="simple"><li>A Tensor of the proper shape initialized with the given value</li>
+</ul>
+</dd>
+</dl>
+
+&nbsp;&nbsp;<a
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L77"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L77" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
 <dt id="toTensor"><a name="toTensor,openArray,int"></a><pre><span class="Keyword">proc</span> <span class="Identifier">toTensor</span><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">;</span> <span class="Identifier">dummy_bugfix</span><span class="Other">:</span> <span class="Keyword">static</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Convert an openarray to a Tensor<dl class="docutils"><dt>Input:</dt>
@@ -284,9 +345,9 @@ Convert an openarray to a Tensor<dl class="docutils"><dt>Input:</dt>
 <p>Note: dummy_bugfix param is unused and is a workaround a Nim bug.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L73"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L94"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L73" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L94" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="toTensor"><a name="toTensor,string"></a><pre><span class="Keyword">proc</span> <span class="Identifier">toTensor</span><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IndexError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></div><span class="Other pragmaend">.}</span></pre></dt>
@@ -295,9 +356,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>This proc handles string specifically as otherwise they are interpreted as a sequence of char</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L84"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L105"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L84" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L105" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="zeros"><a name="zeros,varargs[int]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">zeros</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span><span class="Other">,</span>
@@ -315,9 +376,9 @@ Creates a new Tensor filled with 0<dl class="docutils"><dt>Input:</dt>
 </dl>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L90"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L111"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L90" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L111" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="zeros"><a name="zeros,MetadataArray"></a><pre><span class="Keyword">proc</span> <span class="Identifier">zeros</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">MetadataArray</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span><span class="Other">,</span>
@@ -335,9 +396,9 @@ Creates a new Tensor filled with 0<dl class="docutils"><dt>Input:</dt>
 </dl>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L101"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L122"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L101" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L122" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="zeros_like"><a name="zeros_like,Tensor[T: SomeNumber]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">zeros_like</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">inline</span></div><span class="Other pragmaend">.}</span></pre></dt>
@@ -354,12 +415,12 @@ Creates a new Tensor filled with 0 with the same shape as the input<dl class="do
 </dl>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L112"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L133"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L112" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L133" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="ones"><a name="ones,varargs[int]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">ones</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">inline</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="ones"><a name="ones,varargs[int]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">ones</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Creates a new Tensor filled with 1<dl class="docutils"><dt>Input:</dt>
 <dd><ul class="simple"><li>Shape of the Tensor</li>
@@ -373,13 +434,13 @@ Creates a new Tensor filled with 1<dl class="docutils"><dt>Input:</dt>
 </dl>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L121"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L142"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L121" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L142" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="ones"><a name="ones,MetadataArray"></a><pre><span class="Keyword">proc</span> <span class="Identifier">ones</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">MetadataArray</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span><span class="Other">,</span>
-    <span class="Identifier">inline</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="ones"><a name="ones,MetadataArray"></a><pre><span class="Keyword">proc</span> <span class="Identifier">ones</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">MetadataArray</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">inline</span><span class="Other">,</span>
+    <span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Creates a new Tensor filled with 1<dl class="docutils"><dt>Input:</dt>
 <dd><ul class="simple"><li>Shape of the Tensor</li>
@@ -393,12 +454,12 @@ Creates a new Tensor filled with 1<dl class="docutils"><dt>Input:</dt>
 </dl>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L131"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L151"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L131" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L151" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="ones_like"><a name="ones_like,Tensor[T: SomeNumber]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">ones_like</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">inline</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="ones_like"><a name="ones_like,Tensor[T: SomeNumber]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">ones_like</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Creates a new Tensor filled with 1 with the same shape as the input and filled with 1<dl class="docutils"><dt>Input:</dt>
 <dd><ul class="simple"><li>Tensor</li>
@@ -411,12 +472,12 @@ Creates a new Tensor filled with 1 with the same shape as the input and filled w
 </dl>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L141"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L160"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L141" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L160" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="randomTensor"><a name="randomTensor,varargs[int],T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">randomTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">max</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="randomTensor"><a name="randomTensor,varargs[int],T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">randomTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">max</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 <p>Creates a new float Tensor filled with values between 0 and max.</p>
 <p>Random seed can be set by importing <tt class="docutils literal"><span class="pre">random</span></tt> and <tt class="docutils literal"><span class="pre">randomize(seed)</span></tt></p>
@@ -433,19 +494,19 @@ class="link-seesrc" target="_blank">Source</a>
 </dl>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L154"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L173"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L154" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L173" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="randomTensor"><a name="randomTensor,varargs[int],int"></a><pre><span class="Keyword">proc</span> <span class="Identifier">randomTensor</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">max</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
-<p>Creates a new int Tensor filled with values between 0 and max-1.</p>
+<p>Creates a new int Tensor filled with values between 0 and max.</p>
 <p>Random seed can be set by importing <tt class="docutils literal"><span class="pre">random</span></tt> and <tt class="docutils literal"><span class="pre">randomize(seed)</span></tt></p>
 <dl class="docutils"><dt>Input:</dt>
 <dd><ul class="simple"><li>a shape</li>
-<li>the max value possible (integer, exclusive)</li>
+<li>the max value possible (integer, inclusive)</li>
 <li>a tensor backend</li>
 </ul>
 </dd>
@@ -456,9 +517,9 @@ class="link-seesrc" target="_blank">Source</a>
 </dl>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L166"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L185"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L166" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L185" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <dt id="randomTensor"><a name="randomTensor,varargs[int],Slice[T]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">randomTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">slice</span><span class="Other">:</span> <span class="Identifier">Slice</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
@@ -478,13 +539,13 @@ class="link-seesrc" target="_blank">Source</a>
 </dl>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L178"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L197"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L178" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L197" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="randomNormalTensor"><a name="randomNormalTensor,varargs[int],T,T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">randomNormalTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">mean</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">std</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma">
-    <span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="randomNormalTensor"><a name="randomNormalTensor,varargs[int],T,T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">randomNormalTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">mean</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">std</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span>
+    <span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 <p>Creates a new Tensor filled with values in the normal distribution</p>
 <p>Random seed can be set by importing <tt class="docutils literal"><span class="pre">random</span></tt> and <tt class="docutils literal"><span class="pre">randomize(seed)</span></tt></p>
@@ -501,9 +562,9 @@ class="link-seesrc" target="_blank">Source</a>
 </dl>
 
 &nbsp;&nbsp;<a
-href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L205"
+href="https://github.com/mratsim/arraymancer/tree/master/src/tensor/init_cpu.nim#L224"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L205" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L224" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -516,7 +577,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2017-12-13 23:30:12 UTC</small>
+        <small>Made with Nim. Generated: 2018-05-05 17:09:54 UTC</small>
       </div>
     </div>
   </div>
