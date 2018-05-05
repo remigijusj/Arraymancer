@@ -208,29 +208,29 @@
 <p>I however recommend installing Nim in your user profile via ```choosenim`` &lt;<a class="reference external" href="https://github.com/dom96/choosenim&gt;`__">https://github.com/dom96/choosenim&gt;`__</a>. Once choosenim installed Nim, you can <tt class="docutils literal"><span class="pre">nimble install arraymancer</span></tt> which will pull arraymancer and all its dependencies.</p>
 
 <h3 id="tensors-on-cpu-and-on-cuda">Tensors on CPU and on Cuda</h3><p>Tensors and CudaTensors do not have the same features implemented yet. Also Cuda Tensors can only be float32 or float64 while Cpu Tensor can be integers, string, boolean or any custom object.</p>
-<p>Here is a comparative table, not that this feature set is developing very rapidly.</p>
-<table border="1" class="docutils"><tr><th>Action</th><th>Tensor</th><th>CudaTensor</th></tr>
-<tr><td>Accessing tensor properties</td><td>[x]</td><td>[x]</td></tr>
-<tr><td>Tensor creation</td><td>[x]</td><td>by converting a cpu Tensor</td></tr>
-<tr><td>Accessing or modifying a single value</td><td>[x]</td><td>[]</td></tr>
-<tr><td>Iterating on a Tensor</td><td>[x]</td><td>[]</td></tr>
-<tr><td>Slicing a Tensor</td><td>[x]</td><td>[x]</td></tr>
-<tr><td>Slice mutation <tt class="docutils literal"><span class="pre">a[1,_] = 10</span></tt></td><td>[x]</td><td>[]</td></tr>
-<tr><td>Comparison <tt class="docutils literal"><span class="pre">==</span></tt></td><td>[x]</td><td>Coming soon</td></tr>
-<tr><td>Element-wise basic operations</td><td>[x]</td><td>[x]</td></tr>
-<tr><td>Universal functions</td><td>[x]</td><td>[x]</td></tr>
-<tr><td>Automatically broadcasted operations</td><td>[x]</td><td>Coming soon</td></tr>
-<tr><td>Matrix-Matrix and Matrix vector multiplication</td><td>[x]</td><td>[x] Note: sliced CudaTensors must explicitly be made contiguous</td></tr>
-<tr><td>Displaying a tensor</td><td>[x]</td><td>[x]</td></tr>
-<tr><td>Higher-order functions (map, apply, reduce, fold)</td><td>[x]</td><td>Apply, but only for internal use</td></tr>
-<tr><td>Transposing</td><td>[x]</td><td>[x]</td></tr>
-<tr><td>Converting to contiguous</td><td>[x]</td><td>[x]</td></tr>
-<tr><td>Reshaping</td><td>[x]</td><td>[]</td></tr>
-<tr><td>Explicit broadcast</td><td>[x]</td><td>Coming soon</td></tr>
-<tr><td>Permuting dimensions</td><td>[x]</td><td>Coming soon</td></tr>
-<tr><td>Concatenating along existing dimensions</td><td>[x]</td><td>[]</td></tr>
-<tr><td>Squeezing singleton dimensions</td><td>[x]</td><td>Coming soon</td></tr>
-<tr><td>Slicing + squeezing in one operation</td><td>[x]</td><td>Coming soon</td></tr>
+<p>Here is a comparative table, not that this feature set is developing rapidly.</p>
+<table border="1" class="docutils"><tr><th>Feature</th><th>Tensor</th><th>CudaTensor</th><th>ClTensor</th></tr>
+<tr><td>Accessing tensor properties</td><td>[x]</td><td>[x]</td><td>[x]</td></tr>
+<tr><td>Tensor creation</td><td>[x]</td><td>by converting a cpu Tensor</td><td>by converting a cpu Tensor</td></tr>
+<tr><td>Accessing or modifying a single value</td><td>[x]</td><td>[]</td><td>[]</td></tr>
+<tr><td>Iterating on a Tensor</td><td>[x]</td><td>[]</td><td>[]</td></tr>
+<tr><td>Slicing a Tensor</td><td>[x]</td><td>[x]</td><td>[x]</td></tr>
+<tr><td>Slice mutation <tt class="docutils literal"><span class="pre">a[1,_] = 10</span></tt></td><td>[x]</td><td>[]</td><td>[]</td></tr>
+<tr><td>Comparison <tt class="docutils literal"><span class="pre">==</span></tt></td><td>[x]</td><td>[]</td><td>[]</td></tr>
+<tr><td>Element-wise basic operations</td><td>[x]</td><td>[x]</td><td>[x]</td></tr>
+<tr><td>Universal functions</td><td>[x]</td><td>[]</td><td>[]</td></tr>
+<tr><td>Automatically broadcasted operations</td><td>[x]</td><td>[x]</td><td>[x]</td></tr>
+<tr><td>Matrix-Matrix and Matrix vector multiplication</td><td>[x]</td><td>[x]</td><td>[x]</td></tr>
+<tr><td>Displaying a tensor</td><td>[x]</td><td>[x]</td><td>[x]</td></tr>
+<tr><td>Higher-order functions (map, apply, reduce, fold)</td><td>[x]</td><td>internal only</td><td>internal only</td></tr>
+<tr><td>Transposing</td><td>[x]</td><td>[x]</td><td>[]</td></tr>
+<tr><td>Converting to contiguous</td><td>[x]</td><td>[x]</td><td>[]</td></tr>
+<tr><td>Reshaping</td><td>[x]</td><td>[x]</td><td>[]</td></tr>
+<tr><td>Explicit broadcast</td><td>[x]</td><td>[x]</td><td>[x]</td></tr>
+<tr><td>Permuting dimensions</td><td>[x]</td><td>[]</td><td>[]</td></tr>
+<tr><td>Concatenating along existing dimensions</td><td>[x]</td><td>[]</td><td>[]</td></tr>
+<tr><td>Squeezing singleton dimensions</td><td>[x]</td><td>[x]</td><td>[]</td></tr>
+<tr><td>Slicing + squeezing in one operation</td><td>[x]</td><td>[]</td><td>[]</td></tr>
 </table>
 
 
@@ -238,7 +238,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2018-05-05 17:11:45 UTC</small>
+        <small>Made with Nim. Generated: 2018-05-05 17:50:37 UTC</small>
       </div>
     </div>
   </div>
