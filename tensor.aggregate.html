@@ -144,6 +144,7 @@
     <ul class="monospace">
       <li><a href="uth.speed.html">How Arraymancer achieves its speed?</a></li>
       <li><a href="uth.copy_semantics.html">Why does `=` share data by default aka reference semantics?</a></li>
+      <li><a href="uth.opencl_cuda_nim.html">Working with OpenCL and Cuda in Nim</a></li>
     </ul>
   </span>
 </header>
@@ -156,7 +157,7 @@
     <ul class="simple">
     </ul>
   </div>
-  <div id="searchInputDiv">
+  <div id="searchInput">
     Search: <input type="text" id="searchInput"
       onkeyup="search()" />
   </div>
@@ -189,10 +190,10 @@
     title="mean[T: SomeInteger](t: Tensor[T]): T"><wbr />mean<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#mean,Tensor[T: SomeInteger],int"
     title="mean[T: SomeInteger](t: Tensor[T]; axis: int): Tensor[T]"><wbr />mean<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#mean,Tensor[T: SomeFloat]"
-    title="mean[T: SomeFloat](t: Tensor[T]): T"><wbr />mean<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#mean,Tensor[T: SomeFloat],int"
-    title="mean[T: SomeFloat](t: Tensor[T]; axis: int): Tensor[T]"><wbr />mean<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#mean,Tensor[T: SomeReal]"
+    title="mean[T: SomeReal](t: Tensor[T]): T"><wbr />mean<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#mean,Tensor[T: SomeReal],int"
+    title="mean[T: SomeReal](t: Tensor[T]; axis: int): Tensor[T]"><wbr />mean<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#min,Tensor[T]"
     title="min[T](t: Tensor[T]): T"><wbr />min<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#min,Tensor[T],int"
@@ -201,14 +202,14 @@
     title="max[T](t: Tensor[T]): T"><wbr />max<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#max,Tensor[T],int"
     title="max[T](t: Tensor[T]; axis: int): Tensor[T]"><wbr />max<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#variance,Tensor[T: SomeFloat]"
-    title="variance[T: SomeFloat](t: Tensor[T]): T"><wbr />variance<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#variance,Tensor[T: SomeFloat],int"
-    title="variance[T: SomeFloat](t: Tensor[T]; axis: int): Tensor[T]"><wbr />variance<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#std,Tensor[T: SomeFloat]"
-    title="std[T: SomeFloat](t: Tensor[T]): T"><wbr />std<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#std,Tensor[T: SomeFloat],int"
-    title="std[T: SomeFloat](t: Tensor[T]; axis: int): Tensor[T]"><wbr />std<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#variance,Tensor[T: SomeReal]"
+    title="variance[T: SomeReal](t: Tensor[T]): T"><wbr />variance<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#variance,Tensor[T: SomeReal],int"
+    title="variance[T: SomeReal](t: Tensor[T]; axis: int): Tensor[T]"><wbr />variance<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#std,Tensor[T: SomeReal]"
+    title="std[T: SomeReal](t: Tensor[T]): T"><wbr />std<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#std,Tensor[T: SomeReal],int"
+    title="std[T: SomeReal](t: Tensor[T]; axis: int): Tensor[T]"><wbr />std<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#argmax_max,Tensor[T],int"
     title="argmax_max[T](t: Tensor[T]; axis: int): tuple[indices: Tensor[int], maxes: Tensor[T]]"><wbr />argmax_<wbr />max<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#argmax,Tensor[T],int"
@@ -289,7 +290,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/aggregate.nim#L53" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="mean"><a name="mean,Tensor[T: SomeFloat]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">mean</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">inline</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="mean"><a name="mean,Tensor[T: SomeReal]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">mean</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">inline</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Compute the mean of all elements
 &nbsp;&nbsp;<a
@@ -298,7 +299,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/aggregate.nim#L59" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="mean"><a name="mean,Tensor[T: SomeFloat],int"></a><pre><span class="Keyword">proc</span> <span class="Identifier">mean</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">axis</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">inline</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="mean"><a name="mean,Tensor[T: SomeReal],int"></a><pre><span class="Keyword">proc</span> <span class="Identifier">mean</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">axis</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">inline</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Compute the mean along an axis
 &nbsp;&nbsp;<a
@@ -343,7 +344,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/aggregate.nim#L83" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="variance"><a name="variance,Tensor[T: SomeFloat]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">variance</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
+<dt id="variance"><a name="variance,Tensor[T: SomeReal]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">variance</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 Compute the sample variance of all elements The normalization is by (n-1), also known as Bessel's correction, which partially correct the bias of estimating a population variance from a sample of this population.
 &nbsp;&nbsp;<a
@@ -352,7 +353,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/aggregate.nim#L89" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="variance"><a name="variance,Tensor[T: SomeFloat],int"></a><pre><span class="Keyword">proc</span> <span class="Identifier">variance</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">axis</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="variance"><a name="variance,Tensor[T: SomeReal],int"></a><pre><span class="Keyword">proc</span> <span class="Identifier">variance</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">axis</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Compute the variance of all elements The normalization is by the (n-1), like in the formal definition
 &nbsp;&nbsp;<a
@@ -361,7 +362,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/aggregate.nim#L105" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="std"><a name="std,Tensor[T: SomeFloat]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">std</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">inline</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="std"><a name="std,Tensor[T: SomeReal]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">std</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">inline</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Compute the standard deviation of all elements The normalization is by the (n-1), like in the formal definition
 &nbsp;&nbsp;<a
@@ -370,7 +371,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/aggregate.nim#L121" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="std"><a name="std,Tensor[T: SomeFloat],int"></a><pre><span class="Keyword">proc</span> <span class="Identifier">std</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">axis</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">inline</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="std"><a name="std,Tensor[T: SomeReal],int"></a><pre><span class="Keyword">proc</span> <span class="Identifier">std</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">axis</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span><span class="Other">,</span> <span class="Identifier">inline</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Compute the standard deviation of all elements The normalization is by the (n-1), like in the formal definition
 &nbsp;&nbsp;<a
@@ -444,7 +445,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2018-05-05 17:10:00 UTC</small>
+        <small>Made with Nim. Generated: 2018-05-06 13:02:50 UTC</small>
       </div>
     </div>
   </div>

@@ -144,6 +144,7 @@
     <ul class="monospace">
       <li><a href="uth.speed.html">How Arraymancer achieves its speed?</a></li>
       <li><a href="uth.copy_semantics.html">Why does `=` share data by default aka reference semantics?</a></li>
+      <li><a href="uth.opencl_cuda_nim.html">Working with OpenCL and Cuda in Nim</a></li>
     </ul>
   </span>
 </header>
@@ -156,7 +157,7 @@
     <ul class="simple">
     </ul>
   </div>
-  <div id="searchInputDiv">
+  <div id="searchInput">
     Search: <input type="text" id="searchInput"
       onkeyup="search()" />
   </div>
@@ -204,13 +205,13 @@
   <li><a class="reference" href="#ones_like,Tensor[T: SomeNumber]"
     title="ones_like[T: SomeNumber](t: Tensor[T]): Tensor[T]"><wbr />ones_<wbr />like<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#randomTensor,varargs[int],T"
-    title="randomTensor[T: SomeFloat](shape: varargs[int]; max: T): Tensor[T]"><wbr />random<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="randomTensor[T: SomeReal](shape: varargs[int]; max: T): Tensor[T]"><wbr />random<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#randomTensor,varargs[int],int"
     title="randomTensor(shape: varargs[int]; max: int): Tensor[int]"><wbr />random<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#randomTensor,varargs[int],Slice[T]"
     title="randomTensor[T](shape: varargs[int]; slice: Slice[T]): Tensor[T]"><wbr />random<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#randomNormalTensor,varargs[int],T,T"
-    title="randomNormalTensor[T: SomeFloat](shape: varargs[int]; mean: T = 0; std: T = 1): Tensor[T]"><wbr />random<wbr />Normal<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="randomNormalTensor[T: SomeReal](shape: varargs[int]; mean: T = 0; std: T = 1): Tensor[T]"><wbr />random<wbr />Normal<wbr />Tensor<span class="attachedType" style="visibility:hidden"></span></a></li>
 
   </ul>
 </li>
@@ -477,7 +478,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L160" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="randomTensor"><a name="randomTensor,varargs[int],T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">randomTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">max</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="randomTensor"><a name="randomTensor,varargs[int],T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">randomTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">max</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 <p>Creates a new float Tensor filled with values between 0 and max.</p>
 <p>Random seed can be set by importing <tt class="docutils literal"><span class="pre">random</span></tt> and <tt class="docutils literal"><span class="pre">randomize(seed)</span></tt></p>
@@ -544,8 +545,8 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/init_cpu.nim#L197" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="randomNormalTensor"><a name="randomNormalTensor,varargs[int],T,T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">randomNormalTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">mean</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">std</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span>
-    <span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="randomNormalTensor"><a name="randomNormalTensor,varargs[int],T,T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">randomNormalTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">shape</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">mean</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">std</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma">
+    <span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 <p>Creates a new Tensor filled with values in the normal distribution</p>
 <p>Random seed can be set by importing <tt class="docutils literal"><span class="pre">random</span></tt> and <tt class="docutils literal"><span class="pre">randomize(seed)</span></tt></p>
@@ -577,7 +578,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2018-05-05 17:09:54 UTC</small>
+        <small>Made with Nim. Generated: 2018-05-06 13:02:44 UTC</small>
       </div>
     </div>
   </div>

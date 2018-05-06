@@ -144,6 +144,7 @@
     <ul class="monospace">
       <li><a href="uth.speed.html">How Arraymancer achieves its speed?</a></li>
       <li><a href="uth.copy_semantics.html">Why does `=` share data by default aka reference semantics?</a></li>
+      <li><a href="uth.opencl_cuda_nim.html">Working with OpenCL and Cuda in Nim</a></li>
     </ul>
   </span>
 </header>
@@ -156,7 +157,7 @@
     <ul class="simple">
     </ul>
   </div>
-  <div id="searchInputDiv">
+  <div id="searchInput">
     Search: <input type="text" id="searchInput"
       onkeyup="search()" />
   </div>
@@ -185,8 +186,8 @@
     title="`.*`[T: SomeNumber](a, b: Tensor[T]): Tensor[T]"><wbr />`.*`<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#./,Tensor[T: SomeInteger],Tensor[T: SomeInteger]"
     title="`.&#x2F;`[T: SomeInteger](a, b: Tensor[T]): Tensor[T]"><wbr />`./`<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#./,Tensor[T: SomeFloat],Tensor[T: SomeFloat]"
-    title="`.&#x2F;`[T: SomeFloat](a, b: Tensor[T]): Tensor[T]"><wbr />`./`<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#./,Tensor[T: SomeReal],Tensor[T: SomeReal]"
+    title="`.&#x2F;`[T: SomeReal](a, b: Tensor[T]): Tensor[T]"><wbr />`./`<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#.+=,Tensor[T: SomeNumber],Tensor[T: SomeNumber]"
     title="`.+=`[T: SomeNumber](a: var Tensor[T]; b: Tensor[T])"><wbr />`.+=`<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#.-=,Tensor[T: SomeNumber],Tensor[T: SomeNumber]"
@@ -195,8 +196,8 @@
     title="`.*=`[T: SomeNumber](a: var Tensor[T]; b: Tensor[T])"><wbr />`.*=`<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#./=,Tensor[T: SomeInteger],Tensor[T: SomeInteger]"
     title="`.&#x2F;=`[T: SomeInteger](a: var Tensor[T]; b: Tensor[T])"><wbr />`./=`<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#./=,Tensor[T: SomeFloat],Tensor[T: SomeFloat]"
-    title="`.&#x2F;=`[T: SomeFloat](a: var Tensor[T]; b: Tensor[T])"><wbr />`./=`<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#./=,Tensor[T: SomeReal],Tensor[T: SomeReal]"
+    title="`.&#x2F;=`[T: SomeReal](a: var Tensor[T]; b: Tensor[T])"><wbr />`./=`<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#.+,T,Tensor[T: SomeNumber]"
     title="`.+`[T: SomeNumber](val: T; t: Tensor[T]): Tensor[T]"><wbr />`.+`<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#.+,Tensor[T: SomeNumber],T"
@@ -207,16 +208,16 @@
     title="`.-`[T: SomeNumber](t: Tensor[T]; val: T): Tensor[T]"><wbr />`.-`<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#./,T,Tensor[T: SomeInteger]"
     title="`.&#x2F;`[T: SomeInteger](val: T; t: Tensor[T]): Tensor[T]"><wbr />`./`<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#./,T,Tensor[T: SomeFloat]"
-    title="`.&#x2F;`[T: SomeFloat](val: T; t: Tensor[T]): Tensor[T]"><wbr />`./`<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#.^,Tensor[T: SomeFloat],T"
-    title="`.^`[T: SomeFloat](t: Tensor[T]; exponent: T): Tensor[T]"><wbr />`.^`<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#./,T,Tensor[T: SomeReal]"
+    title="`.&#x2F;`[T: SomeReal](val: T; t: Tensor[T]): Tensor[T]"><wbr />`./`<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#.^,Tensor[T: SomeReal],T"
+    title="`.^`[T: SomeReal](t: Tensor[T]; exponent: T): Tensor[T]"><wbr />`.^`<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#.+=,Tensor[T: SomeNumber],T"
     title="`.+=`[T: SomeNumber](t: var Tensor[T]; val: T)"><wbr />`.+=`<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#.-=,Tensor[T: SomeNumber],T"
     title="`.-=`[T: SomeNumber](t: var Tensor[T]; val: T)"><wbr />`.-=`<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#.^=,Tensor[T: SomeFloat],T"
-    title="`.^=`[T: SomeFloat](t: var Tensor[T]; exponent: T)"><wbr />`.^=`<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#.^=,Tensor[T: SomeReal],T"
+    title="`.^=`[T: SomeReal](t: var Tensor[T]; exponent: T)"><wbr />`.^=`<span class="attachedType" style="visibility:hidden"></span></a></li>
 
   </ul>
 </li>
@@ -275,7 +276,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/operators_broadcasted.nim#L42" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="./"><a name="./,Tensor[T: SomeFloat],Tensor[T: SomeFloat]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">`./`</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="./"><a name="./,Tensor[T: SomeReal],Tensor[T: SomeReal]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">`./`</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 <p>Tensor element-wise division for real numbers.</p>
 <p>And broadcasted element-wise division.</p>
@@ -330,7 +331,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/operators_broadcasted.nim#L86" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="./="><a name="./=,Tensor[T: SomeFloat],Tensor[T: SomeFloat]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">`./=`</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dt id="./="><a name="./=,Tensor[T: SomeReal],Tensor[T: SomeReal]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">`./=`</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
 <dd>
 <p>Tensor broadcasted in-place float division.</p>
 <p>Only the right hand side tensor can be broadcasted.</p>
@@ -386,7 +387,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/operators_broadcasted.nim#L124" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="./"><a name="./,T,Tensor[T: SomeFloat]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">`./`</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="./"><a name="./,T,Tensor[T: SomeReal]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">`./`</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Broadcasted division of a float by a tensor of floats.
 &nbsp;&nbsp;<a
@@ -395,7 +396,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/operators_broadcasted.nim#L128" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id=".^"><a name=".^,Tensor[T: SomeFloat],T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">`.^`</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">exponent</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id=".^"><a name=".^,Tensor[T: SomeReal],T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">`.^`</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">exponent</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Compute element-wise exponentiation
 &nbsp;&nbsp;<a
@@ -422,7 +423,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/operators_broadcasted.nim#L143" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id=".^="><a name=".^=,Tensor[T: SomeFloat],T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">`.^=`</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">exponent</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span></pre></dt>
+<dt id=".^="><a name=".^=,Tensor[T: SomeReal],T"></a><pre><span class="Keyword">proc</span> <span class="Identifier">`.^=`</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">exponent</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span></pre></dt>
 <dd>
 Compute in-place element-wise exponentiation
 &nbsp;&nbsp;<a
@@ -441,7 +442,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2018-05-05 17:10:07 UTC</small>
+        <small>Made with Nim. Generated: 2018-05-06 13:02:57 UTC</small>
       </div>
     </div>
   </div>

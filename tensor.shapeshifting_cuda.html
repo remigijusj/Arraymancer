@@ -144,6 +144,7 @@
     <ul class="monospace">
       <li><a href="uth.speed.html">How Arraymancer achieves its speed?</a></li>
       <li><a href="uth.copy_semantics.html">Why does `=` share data by default aka reference semantics?</a></li>
+      <li><a href="uth.opencl_cuda_nim.html">Working with OpenCL and Cuda in Nim</a></li>
     </ul>
   </span>
 </header>
@@ -156,7 +157,7 @@
     <ul class="simple">
     </ul>
   </div>
-  <div id="searchInputDiv">
+  <div id="searchInput">
     Search: <input type="text" id="searchInput"
       onkeyup="search()" />
   </div>
@@ -179,9 +180,9 @@
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#transpose,CudaTensor"
     title="transpose(t: CudaTensor): CudaTensor"><wbr />transpose<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#asContiguous,CudaTensor[T: SomeFloat],OrderType,bool"
-    title="asContiguous[T: SomeFloat](t: CudaTensor[T]; layout: OrderType = colMajor;
-                          force: bool = false): CudaTensor[T]"><wbr />as<wbr />Contiguous<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#asContiguous,CudaTensor[T: SomeReal],OrderType,bool"
+    title="asContiguous[T: SomeReal](t: CudaTensor[T]; layout: OrderType = colMajor;
+                         force: bool = false): CudaTensor[T]"><wbr />as<wbr />Contiguous<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#reshape,CudaTensor,varargs[int]"
     title="reshape(t: CudaTensor; new_shape: varargs[int]): CudaTensor"><wbr />reshape<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#broadcast,CudaTensor,varargs[int]"
@@ -223,8 +224,8 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/shapeshifting_cuda.nim#L25" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="asContiguous"><a name="asContiguous,CudaTensor[T: SomeFloat],OrderType,bool"></a><pre><span class="Keyword">proc</span> <span class="Identifier">asContiguous</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">layout</span><span class="Other">:</span> <span class="Identifier">OrderType</span> <span class="Other">=</span> <span class="Identifier">colMajor</span><span class="Other">;</span>
-                              <span class="Identifier">force</span><span class="Other">:</span> <span class="Identifier">bool</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="asContiguous"><a name="asContiguous,CudaTensor[T: SomeReal],OrderType,bool"></a><pre><span class="Keyword">proc</span> <span class="Identifier">asContiguous</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">layout</span><span class="Other">:</span> <span class="Identifier">OrderType</span> <span class="Other">=</span> <span class="Identifier">colMajor</span><span class="Other">;</span>
+                             <span class="Identifier">force</span><span class="Other">:</span> <span class="Identifier">bool</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">CudaTensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noSideEffect</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 <p>Transform a tensor with general striding to a Tensor with contiguous layout.</p>
 <p>By default CudaTensor will be colMajor (contrary to a cpu tensor).</p>
@@ -338,7 +339,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2018-05-05 17:09:47 UTC</small>
+        <small>Made with Nim. Generated: 2018-05-06 13:02:37 UTC</small>
       </div>
     </div>
   </div>

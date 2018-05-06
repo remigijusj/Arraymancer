@@ -144,6 +144,7 @@
     <ul class="monospace">
       <li><a href="uth.speed.html">How Arraymancer achieves its speed?</a></li>
       <li><a href="uth.copy_semantics.html">Why does `=` share data by default aka reference semantics?</a></li>
+      <li><a href="uth.opencl_cuda_nim.html">Working with OpenCL and Cuda in Nim</a></li>
     </ul>
   </span>
 </header>
@@ -156,7 +157,7 @@
     <ul class="simple">
     </ul>
   </div>
-  <div id="searchInputDiv">
+  <div id="searchInput">
     Search: <input type="text" id="searchInput"
       onkeyup="search()" />
   </div>
@@ -183,20 +184,20 @@
     title="melwise_mul[T](a: var Tensor[T]; b: Tensor[T])"><wbr />melwise_<wbr />mul<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#elwise_div,Tensor[T: SomeInteger],Tensor[T: SomeInteger]"
     title="elwise_div[T: SomeInteger](a, b: Tensor[T]): Tensor[T]"><wbr />elwise_<wbr />div<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#elwise_div,Tensor[T: SomeFloat],Tensor[T: SomeFloat]"
-    title="elwise_div[T: SomeFloat](a, b: Tensor[T]): Tensor[T]"><wbr />elwise_<wbr />div<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#elwise_div,Tensor[T: SomeReal],Tensor[T: SomeReal]"
+    title="elwise_div[T: SomeReal](a, b: Tensor[T]): Tensor[T]"><wbr />elwise_<wbr />div<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#melwise_div,Tensor[T: SomeInteger],Tensor[T: SomeInteger]"
     title="melwise_div[T: SomeInteger](a: var Tensor[T]; b: Tensor[T])"><wbr />melwise_<wbr />div<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#melwise_div,Tensor[T: SomeFloat],Tensor[T: SomeFloat]"
-    title="melwise_div[T: SomeFloat](a: var Tensor[T]; b: Tensor[T])"><wbr />melwise_<wbr />div<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#reciprocal,Tensor[T: SomeFloat]"
-    title="reciprocal[T: SomeFloat](t: Tensor[T]): Tensor[T]"><wbr />reciprocal<span class="attachedType" style="visibility:hidden"></span></a></li>
-  <li><a class="reference" href="#mreciprocal,Tensor[T: SomeFloat]"
-    title="mreciprocal[T: SomeFloat](t: var Tensor[T])"><wbr />mreciprocal<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#melwise_div,Tensor[T: SomeReal],Tensor[T: SomeReal]"
+    title="melwise_div[T: SomeReal](a: var Tensor[T]; b: Tensor[T])"><wbr />melwise_<wbr />div<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#reciprocal,Tensor[T: SomeReal]"
+    title="reciprocal[T: SomeReal](t: Tensor[T]): Tensor[T]"><wbr />reciprocal<span class="attachedType" style="visibility:hidden"></span></a></li>
+  <li><a class="reference" href="#mreciprocal,Tensor[T: SomeReal]"
+    title="mreciprocal[T: SomeReal](t: var Tensor[T])"><wbr />mreciprocal<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#negate,Tensor[T: int or int8]"
-    title="negate[T: SomeSignedInt | SomeFloat](t: Tensor[T]): Tensor[T]"><wbr />negate<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="negate[T: SomeSignedInt | SomeReal](t: Tensor[T]): Tensor[T]"><wbr />negate<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#mnegate,Tensor[T: int or int8]"
-    title="mnegate[T: SomeSignedInt | SomeFloat](t: var Tensor[T])"><wbr />mnegate<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="mnegate[T: SomeSignedInt | SomeReal](t: var Tensor[T])"><wbr />mnegate<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#-,Tensor[T: SomeNumber]"
     title="`-`[T: SomeNumber](t: Tensor[T]): Tensor[T]"><wbr />`-`<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#abs,Tensor[T]"
@@ -210,7 +211,7 @@
   <li><a class="reference" href="#square,T"
     title="square[T](x: T): T"><wbr />square<span class="attachedType" style="visibility:hidden"></span></a></li>
   <li><a class="reference" href="#square,Tensor"
-    title="square(t182186: Tensor): Tensor"><wbr />square<span class="attachedType" style="visibility:hidden"></span></a></li>
+    title="square(t178186: Tensor): Tensor"><wbr />square<span class="attachedType" style="visibility:hidden"></span></a></li>
 
   </ul>
 </li>
@@ -256,7 +257,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/math_functions.nim#L30" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="elwise_div"><a name="elwise_div,Tensor[T: SomeFloat],Tensor[T: SomeFloat]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">elwise_div</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="elwise_div"><a name="elwise_div,Tensor[T: SomeReal],Tensor[T: SomeReal]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">elwise_div</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Element-wise division
 &nbsp;&nbsp;<a
@@ -274,7 +275,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/math_functions.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="melwise_div"><a name="melwise_div,Tensor[T: SomeFloat],Tensor[T: SomeFloat]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">melwise_div</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dt id="melwise_div"><a name="melwise_div,Tensor[T: SomeReal],Tensor[T: SomeReal]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">melwise_div</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
 <dd>
 Element-wise division (in-place)
 &nbsp;&nbsp;<a
@@ -283,7 +284,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/math_functions.nim#L42" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="reciprocal"><a name="reciprocal,Tensor[T: SomeFloat]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">reciprocal</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="reciprocal"><a name="reciprocal,Tensor[T: SomeReal]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">reciprocal</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Return a tensor with the reciprocal 1/x of all elements
 &nbsp;&nbsp;<a
@@ -292,7 +293,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/math_functions.nim#L46" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="mreciprocal"><a name="mreciprocal,Tensor[T: SomeFloat]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">mreciprocal</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dt id="mreciprocal"><a name="mreciprocal,Tensor[T: SomeReal]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">mreciprocal</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
 <dd>
 Apply the reciprocal 1/x in-place to all elements of the Tensor
 &nbsp;&nbsp;<a
@@ -301,7 +302,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/math_functions.nim#L50" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="negate"><a name="negate,Tensor[T: int or int8]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">negate</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeSignedInt</span> <span class="Operator">|</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="negate"><a name="negate,Tensor[T: int or int8]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">negate</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeSignedInt</span> <span class="Operator">|</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 Return a tensor with all elements negated (10 -&gt; -10)
 &nbsp;&nbsp;<a
@@ -310,7 +311,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/math_functions.nim#L54" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="mnegate"><a name="mnegate,Tensor[T: int or int8]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">mnegate</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeSignedInt</span> <span class="Operator">|</span> <span class="Identifier">SomeFloat</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dt id="mnegate"><a name="mnegate,Tensor[T: int or int8]"></a><pre><span class="Keyword">proc</span> <span class="Identifier">mnegate</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeSignedInt</span> <span class="Operator">|</span> <span class="Identifier">SomeReal</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">Tensor</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
 <dd>
 Negate in-place all elements of the tensor (10 -&gt; -10)
 &nbsp;&nbsp;<a
@@ -373,7 +374,7 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/mratsim/arraymancer/edit/master/src/tensor/math_functions.nim#L81" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<dt id="square"><a name="square,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">square</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">182186</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
+<dt id="square"><a name="square,Tensor"></a><pre><span class="Keyword">proc</span> <span class="Identifier">square</span><span class="Other">(</span><span class="Identifier">t</span><span class="DecNumber">178186</span><span class="Other">:</span> <span class="Identifier">Tensor</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Tensor</span> <span class="Other pragmabegin">{.</span><div class="pragma"><span class="Identifier">noInit</span></div><span class="Other pragmaend">.}</span></pre></dt>
 <dd>
 
 &nbsp;&nbsp;<a
@@ -392,7 +393,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2018-05-05 17:10:15 UTC</small>
+        <small>Made with Nim. Generated: 2018-05-06 13:03:09 UTC</small>
       </div>
     </div>
   </div>
