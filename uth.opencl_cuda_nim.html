@@ -169,7 +169,7 @@
       *dst = __ldg(A)&quot;&quot;&quot;</span><span class="Punctuation">,</span> <span class="Identifier">op_symbol</span><span class="Punctuation">,</span> <span class="LongStringLit">&quot;&quot;&quot; __ldg(B);
       }
   };
-  &quot;&quot;&quot;</span><span class="Punctuation">]</span><span class="Operator">.</span><span class="Punctuation">}</span></pre><p>You can see here the advantage of C++: <tt class="docutils literal"><span class="pre">typename T</span></tt> to template over int/float/double and <tt class="docutils literal"><span class="pre">higher-order functions</span></tt>/<tt class="docutils literal"><span class="pre">function object</span></tt> for cleaner code. You can also see that Nim can directly inline C++ code with <cite>emit</cite> and I even templatize the operation_name.</p>
+  &quot;&quot;&quot;</span><span class="Punctuation">]</span><span class="Operator">.</span><span class="Punctuation">}</span></pre><p>You can see here the advantage of C++: <tt class="docutils literal"><span class="pre">typename T</span></tt> to template over int/float/double and higher-order functions/function object for cleaner code. You can also see that Nim can directly inline C++ code with <tt class="docutils literal"><span class="pre">emit</span></tt> and I even templatize the operation_name.</p>
 <p>Now what about OpenCL? Unfortunately C doesn’t offer something similar and requires a lot of boilerplate. The alternative, the C++ official OpenCL API and implementation: SYCL is very experimental and I am not sure how it works on actual GPUs.</p>
 <p>However thanks to Nim metaprogramming, squashing the C boilerplate is super easy. Here is an example kernel to do C = A op B</p>
 <pre class="listing"><span class="Keyword">template</span> <span class="Identifier">gen_cl_apply3</span><span class="Operator">*</span><span class="Punctuation">(</span><span class="Identifier">kern_name</span><span class="Punctuation">,</span> <span class="Identifier">ctype</span><span class="Punctuation">,</span> <span class="Identifier">op</span><span class="Punctuation">:</span> <span class="Identifier">string</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">string</span> <span class="Operator">=</span>
@@ -376,7 +376,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2018-05-06 13:04:39 UTC</small>
+        <small>Made with Nim. Generated: 2018-05-06 13:11:25 UTC</small>
       </div>
     </div>
   </div>
