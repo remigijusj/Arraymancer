@@ -45,6 +45,7 @@ type
   SGD*[TT] = ref object of Optimizer[TT]
     ## Stochastic gradient descent
     lr*: TT.T # Learning rate. T is the generic parameter of Tensor[T]
+    wd*: TT.T # Weight decay
 
 proc newSGD*[T](params: varargs[Variable[Tensor[T]]], learning_rate: T): SGD[Tensor[T]] {.deprecated: "Use the optimizer macro instead".}=
   new(result)
@@ -57,11 +58,11 @@ method update*[TT](self: SGD[TT]) =
     # v.value -= learning rate * grad
     if v.requires_grad:
       apply2_inline(v.value, v.grad):
-        x - self.lr * y
+        x - self.lr * (y + self.wd * x)
       # Zero the gradient
       v.grad = v.value.zeros_like # TODO "setZero" instead of a new allocation
 
-func optimizer*[M, T](model: M, _: typedesc[SGD], learning_rate: T): SGD[Tensor[T]] =
+func optimizer*[M, T](model: M, _: typedesc[SGD], learning_rate: T, weight_decay: T = T(0)): SGD[Tensor[T]] =
   ## Create a SGD optimizer that will update the model weight
 
   # TODO: rename to optimize[M](model: M, OptimizerKind: typedesc[SGD], learning_rate: SomeFloat): ...
@@ -70,6 +71,7 @@ func optimizer*[M, T](model: M, _: typedesc[SGD], learning_rate: T): SGD[Tensor[
   new(result)
   result.params = @[]
   result.lr = learning_rate
+  result.wd = weight_decay
 
   for layer in fields(model):
     when layer is Variable:
@@ -89,6 +91,7 @@ type
   Adam*[TT] = ref object of Optimizer[TT]
     ## Adaptative Moment Estimation
     learning_rate: TT.T
+    weight_decay: TT.T
     beta1, beta2: TT.T              ## Decays on first and second moment
     beta1_t, beta2_t: TT.T          ## Current decay
     first_moments: seq[TT]          ## Exponential moving averages (mean estimation)
@@ -116,7 +119,7 @@ method update*[TT](self: Adam[TT]) =
         self.beta2 * x + (1 - self.beta2) * y * y
       # Adjust weight
       apply3_inline(v.value, self.first_moments[i], self.second_moments[i]):
-        x - lr_t * y / (z.sqrt + self.epsilon)
+        x - lr_t * y / (z.sqrt + self.epsilon) - self.weight_decay * x
 
       # Zero the gradient
       v.grad = v.value.zeros_like # TODO "setZero" instead of a new allocation
@@ -126,7 +129,8 @@ func optimizer*[M, T](
         _: typedesc[Adam],
         learning_rate: T = T(0.001),
         beta1: T = T(0.9), beta2: T = T(0.999),
-        eps: T = T(1e-8)
+        eps: T = T(1e-8),
+        weight_decay: T = T(0)
       ): Adam[Tensor[T]] =
   ## Create a Adam optimizer that will update the model weight
 
@@ -136,6 +140,7 @@ func optimizer*[M, T](
   new(result)
   result.params = @[]
   result.learning_rate = learning_rate
+  result.weight_decay = weight_decay
   result.beta1 = beta1
   result.beta1_t = beta1
   result.beta2 = beta2
