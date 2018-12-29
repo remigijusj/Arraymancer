@@ -4,9 +4,10 @@
 
 import
   macros, tables,
-  ./dsl_types
-
-proc trainParamsConv2D(self: Neuromancer, field_name: NimNode, topo: LayerTopology) =
+  ./dsl_types,
+  ../nn/init
+  
+proc trainParamsConv2D(self: Neuromancer, field_name: NimNode, topo: LayerTopology, options: InitOptions) =
 
   # 1. Create the object field
   var convConfig: ModelField
@@ -26,7 +27,7 @@ proc trainParamsConv2D(self: Neuromancer, field_name: NimNode, topo: LayerTopolo
     w_shape = kshape
     b_shape = quote do: [`kshape`[0], 1, 1]
 
-    w = quote do: kaiming_normal(`w_shape`, `sst`)
+    w = quote do: init_tensor(`w_shape`, `sst`, `options`)
     b = quote do: zeros[`sst`](`b_shape`)
 
   convConfig.init_call = newStmtList()
@@ -44,7 +45,7 @@ proc trainParamsConv2D(self: Neuromancer, field_name: NimNode, topo: LayerTopolo
 
   self.trainparams.add convConfig
 
-proc trainParamsLinear(self: Neuromancer, field_name: NimNode, topo: LayerTopology) =
+proc trainParamsLinear(self: Neuromancer, field_name: NimNode, topo: LayerTopology, options: InitOptions) =
 
   # 1. Create the object field
   var linearConfig: ModelField
@@ -65,7 +66,7 @@ proc trainParamsLinear(self: Neuromancer, field_name: NimNode, topo: LayerTopolo
     w_shape = quote do: [`out_shape`, `in_shape`]
     b_shape = quote do: [1, `out_shape`]
 
-    w = quote do: kaiming_normal(`w_shape`, `sst`)
+    w = quote do: init_tensor(`w_shape`, `sst`, `options`)
     b = quote do: zeros[`sst`](`b_shape`)
   linearConfig.init_call = newStmtList()
 
@@ -82,7 +83,7 @@ proc trainParamsLinear(self: Neuromancer, field_name: NimNode, topo: LayerTopolo
 
   self.trainparams.add linearConfig
 
-proc trainParamsGRU(self: Neuromancer, field_name: NimNode, topo: LayerTopology) =
+proc trainParamsGRU(self: Neuromancer, field_name: NimNode, topo: LayerTopology, options: InitOptions) =
 
   # 1. Create the object field
   var GRUConfig: ModelField
@@ -147,15 +148,44 @@ proc trainParamsGRU(self: Neuromancer, field_name: NimNode, topo: LayerTopology)
 
   self.trainparams.add GRUConfig
 
-proc genModelFieldInit*(self: Neuromancer) =
+template unknown(section: Nimnode) =
+  error:
+    lineInfo(section) &
+      ": unknown neural network configuration option \"" &
+      $section & "\""
+
+proc parseInitOptions(init: NimNode): InitOptions =
+
+  if init.kind == nnkNilLit:
+    return (mode: imKaiming, variant: ivUniform, nonlinearity: inRelu)
+
+  elif init.kind == nnkStmtList:
+    assert(init.len == 1 and init[0].kind == nnkCall and init[0].len == 3)
+    let opts = init[0]
+
+    if eqIdent(opts[0], "Xavier") or eqIdent(opts[0], "Glorot"): result.mode = imXavier
+    elif eqIdent(opts[0], "Kaiming") or eqIdent(opts[0], "He"): result.mode = imKaiming
+    else: unknown(opts[0])
+
+    if eqIdent(opts[1], "uniform"): result.variant = ivUniform
+    elif eqIdent(opts[1], "normal"): result.variant = ivNormal
+    else: unknown(opts[1])
+
+    if eqIdent(opts[2], "sigmoid"): result.nonlinearity = inSigmoid
+    elif eqIdent(opts[2], "tanh"): result.nonlinearity = inTanh
+    elif eqIdent(opts[2], "relu"): result.nonlinearity = inRelu
+    else: unknown(opts[2])
+
+proc genModelFieldInit*(self: Neuromancer, initialize: NimNode) =
 
   self.trainparams = @[]
+  let options = parseInitOptions(initialize)
 
   for k, v in pairs(self.topoTable):
     case v.kind:
-    of lkConv2D: self.trainParamsConv2D(k, v)
-    of lkLinear: self.trainParamsLinear(k, v)
-    of lkGRU: self.trainParamsGRU(k, v)
+    of lkConv2D: self.trainParamsConv2D(k, v, options)
+    of lkLinear: self.trainParamsLinear(k, v, options)
+    of lkGRU: self.trainParamsGRU(k, v, options)
     else:
       discard
 

@@ -18,6 +18,8 @@ proc splitSections(config: NimNode): NetworkSections =
     if section.kind == nnkCall:
       if eqIdent(section[0], "layers"):
         result.layers = section[1]
+      elif eqIdent(section[0], "initialize"):
+        result.initialize = section[1]
       else:
         unknown()
     elif section.kind == nnkCommand:
@@ -155,6 +157,8 @@ macro network*(ctx: Context, model_name: untyped, config: untyped): untyped =
   ##             fl:         Flatten(mp2.out_shape)
   ##             hidden:     Linear(fl.out_shape, 500)
   ##             classifier: Linear(500, 10)
+  ##           initialize:
+  ##             Kaiming(normal, relu)
   ##           forward x:
   ##             x.cv1.relu.mp1.cv2.relu.mp2.fl.hidden.relu.classifier
 
@@ -174,7 +178,7 @@ macro network*(ctx: Context, model_name: untyped, config: untyped): untyped =
   vm.topoTable.topoFromLayers(sections.layers)
 
   # 2. Generate the model fields, initialization and template synctactic sugar
-  vm.genModelFieldInit()
+  vm.genModelFieldInit(sections.initialize)
   vm.genTemplateShortcuts()
 
   # 3. Generate the type section

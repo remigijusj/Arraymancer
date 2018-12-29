@@ -37,6 +37,21 @@ type Distribution = enum
   #   - https://github.com/keras-team/keras/issues/8048
   #   - https://github.com/tensorflow/tensorflow/issues/18706
 
+type
+  InitMode* = enum
+    imKaiming, imXavier
+
+  InitVariant* = enum
+    ivUniform, ivNormal
+
+  InitNonlinearity* = enum
+    inSigmoid, inTanh, inRelu
+
+  InitOptions* = tuple
+    mode: InitMode
+    variant: InitVariant
+    nonlinearity: InitNonlinearity
+    
 func compute_fans(shape: varargs[int]): tuple[fan_in, fan_out: int] =
   # Definitions:
   #   - fan_in: the numbers of inputs a logic gate can handle
@@ -235,3 +250,26 @@ proc yann_normal*(shape: varargs[int], T: type): Tensor[T] =
 # Initialisations from
 # Exact solutions to the nonlinear dynamics of learning in deep linear neural networks
 #     2013, Saxe et al, https://arxiv.org/abs/1312.6120
+
+# ############################################################
+#
+#                    Common interface
+#
+# ############################################################
+
+proc init_tensor*(shape: varargs[int], T: type, options: InitOptions): Tensor[T] {.noInit.} =
+  
+  case options.mode
+  of imXavier:
+    case options.variant
+    of ivUniform:
+      xavier_uniform(shape, T)
+    of ivNormal:
+      xavier_normal(shape, T)
+
+  of imKaiming:
+    case options.variant
+    of ivUniform:
+      kaiming_uniform(shape, T)
+    of ivNormal:
+      kaiming_normal(shape, T)

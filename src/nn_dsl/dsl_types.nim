@@ -9,7 +9,7 @@ import
 type
   #################################################
 
-  NetworkSections* = tuple[layers, forward: NimNode]
+  NetworkSections* = tuple[layers, initialize, forward: NimNode]
 
   ModelField* = tuple[field_name: NimNode, field_type: NimNode, init_call: NimNode]
     ## Field name, type and initialization proc

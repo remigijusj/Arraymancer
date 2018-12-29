@@ -76,6 +76,8 @@ proc ex02() =
       fl:         Flatten(mp2.out_shape)
       hidden:     Linear(fl.out_shape, 500)
       classifier: Linear(500, 10)
+    initialize:
+      Kaiming(uniform, relu)
     forward x:
       x.cv1.relu.mp1.cv2.relu.mp2.fl.hidden.relu.classifier
 
