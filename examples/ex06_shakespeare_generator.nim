@@ -387,8 +387,8 @@ proc main() =
   let model = ctx.newShakespeareNet()
 
   # Optimizer
-  # let optim = model.optimizerSGD(learning_rate = LearningRate)
-  var optim = model.optimizerAdam(learning_rate = LearningRate)
+  # let optim = model.optimizer(SGD, learning_rate = LearningRate)
+  var optim = model.optimizer(Adam, learning_rate = LearningRate)
 
   # We use a different RNG for seq split
   var split_rng = initRand(42)

@@ -146,7 +146,7 @@ network ctx, TwoLayersNet:
 
 let
   model = ctx.init(TwoLayersNet)
-  optim = model.optimizerSGD(learning_rate = 1e-4'f32)
+  optim = model.optimizer(SGD, learning_rate = 1e-4'f32)
 
 # ##################################################################
 # Training
@@ -280,7 +280,7 @@ network ctx, FizzBuzzNet:
     x.hidden.relu.output
 
 let model = ctx.init(FizzBuzzNet)
-let optim = model.optimizerSGD(0.05'f32)
+let optim = model.optimizer(SGD, 0.05'f32)
 
 # ....
 echo answer
@@ -316,7 +316,7 @@ network ctx, DemoNet:
     x.cv1.relu.mp1.cv2.relu.mp2.fl.hidden.relu.classifier
 
 let model = ctx.init(DemoNet)
-let optim = model.optimizerSGD(learning_rate = 0.01'f32)
+let optim = model.optimizer(SGD, learning_rate = 0.01'f32)
 
 # ...
 # Accuracy over 90% in a couple minutes on a laptop CPU
@@ -359,7 +359,7 @@ network ctx, TheGreatSequencer:
 
 # Allocate the model
 let model = ctx.init(TheGreatSequencer)
-let optim = model.optimizerSGD(0.01'f32)
+let optim = model.optimizer(SGD, 0.01'f32)
 
 # ...
 let exam = ctx.variable([

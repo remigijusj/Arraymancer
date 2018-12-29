@@ -83,7 +83,7 @@ proc ex02() =
 
   let model = ctx.init(DemoNet)
 
-  let optim = model.optimizerSGD(learning_rate = 0.01'f32)
+  let optim = model.optimizer(SGD, learning_rate = 0.01'f32)
 
   for epoch in 0 ..< 1:
     for batch_id in 0 ..< 1:

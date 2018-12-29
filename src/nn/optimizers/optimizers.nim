@@ -19,20 +19,38 @@ import  ../../tensor/[tensor, higher_order_applymap],
 
 # ############################################################
 #
+#             Generic optimizers
+#
+# ############################################################
+
+type Optimizer*[TT] = ref object of RootObj
+  ## Base class for optimizers
+  params*: seq[Variable[TT]] ## Learnable weights
+
+method update*[TT](self: Optimizer[TT]) {.base, inline.} =
+  raise newException(ValueError, "base update method is not implemented")
+
+method zeroGrads*[TT](self: Optimizer[TT]) {.base, inline.} =
+  # Reset the gradients of the optimized params
+  for v in self.params:
+    v.grad = v.value.zeros_like
+
+# ############################################################
+#
 #             SGD: Stochastic Gradient Descent
 #
 # ############################################################
 
 type
-  Sgd*[TT] = object
+  SGD*[TT] = ref object of Optimizer[TT]
     ## Stochastic gradient descent
-    params*: seq[Variable[TT]]
     lr*: TT.T # Learning rate. T is the generic parameter of Tensor[T]
 
 proc newSGD*[T](params: varargs[Variable[Tensor[T]]], learning_rate: T): SGD[Tensor[T]] {.deprecated: "Use the optimizer macro instead".}=
-  SGD[Tensor[T]](params: @params, lr: learning_rate)
+  new(result)
+  result = SGD[Tensor[T]](params: @params, lr: learning_rate)
 
-proc update*(self: Sgd) =
+method update*[TT](self: SGD[TT]) =
   # Update the params with formula Value -= lr * gradient
   # Note: SGD expects gradient to be scaled by batchsize (done by default in Arraymancer)
   for v in self.params:
@@ -43,12 +61,13 @@ proc update*(self: Sgd) =
       # Zero the gradient
       v.grad = v.value.zeros_like # TODO "setZero" instead of a new allocation
 
-func optimizerSGD*[M, T](model: M, learning_rate: T): Sgd[Tensor[T]] =
+func optimizer*[M, T](model: M, _: typedesc[SGD], learning_rate: T): SGD[Tensor[T]] =
   ## Create a SGD optimizer that will update the model weight
 
   # TODO: rename to optimize[M](model: M, OptimizerKind: typedesc[SGD], learning_rate: SomeFloat): ...
   # Pending https://github.com/nim-lang/Nim/issues/7734 and https://github.com/nim-lang/Nim/issues/7733
 
+  new(result)
   result.params = @[]
   result.lr = learning_rate
 
@@ -67,9 +86,8 @@ func optimizerSGD*[M, T](model: M, learning_rate: T): Sgd[Tensor[T]] =
 # ############################################################
 
 type
-  Adam*[TT] = object
+  Adam*[TT] = ref object of Optimizer[TT]
     ## Adaptative Moment Estimation
-    params: seq[Variable[TT]]       ## Learnable weights
     learning_rate: TT.T
     beta1, beta2: TT.T              ## Decays on first and second moment
     beta1_t, beta2_t: TT.T          ## Current decay
@@ -77,7 +95,7 @@ type
     second_moments: seq[TT]         ## Exponential moving averages squared (uncentered variance)
     epsilon: TT.T                   ## Epsilon for numerical stability when dividing
 
-proc update*(self: var Adam) =
+method update*[TT](self: Adam[TT]) =
   # We use the second formulation of Adam from Kingma et al similar to Tensorflow
 
   # Bias corrected learning rate
@@ -103,17 +121,19 @@ proc update*(self: var Adam) =
       # Zero the gradient
       v.grad = v.value.zeros_like # TODO "setZero" instead of a new allocation
 
-func optimizerAdam*[M, T](
+func optimizer*[M, T](
         model: M,
+        _: typedesc[Adam],
         learning_rate: T = T(0.001),
-        beta1 = T(0.9), beta2 = T(0.999),
-        eps = T(1e-8)
+        beta1: T = T(0.9), beta2: T = T(0.999),
+        eps: T = T(1e-8)
       ): Adam[Tensor[T]] =
   ## Create a Adam optimizer that will update the model weight
 
   # TODO: rename to optimize[M](model: M, OptimizerKind: typedesc[SGD], learning_rate: SomeFloat): ...
   # Pending https://github.com/nim-lang/Nim/issues/7734 and https://github.com/nim-lang/Nim/issues/7733
 
+  new(result)
   result.params = @[]
   result.learning_rate = learning_rate
   result.beta1 = beta1
@@ -133,18 +153,3 @@ func optimizerAdam*[M, T](
           result.params.add field
           result.first_moments.add field.grad.zeros_like
           result.second_moments.add field.grad.zeros_like
-
-# ############################################################
-#
-#                 Generic optimizers
-#
-# ############################################################
-
-type
-  Optimizer*[TT] = Sgd[TT] or Adam[TT]
-
-proc zeroGrads*(o: Optimizer) =
-  # Reset the gradients of the optimized params
-  # TODO setZero instead of allocating.
-  for v in o.params:
-    v.grad = v.value.zeros_like
